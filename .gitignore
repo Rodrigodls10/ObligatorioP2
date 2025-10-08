@@ -1,8 +1,0 @@
-# Ignore build artifacts 
-.vs/ 
-bin/ 
-obj/ 
-Debug/ 
-Release/ 
-*.user 
-*.suo 
