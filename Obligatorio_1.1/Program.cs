@@ -1,5 +1,6 @@
 ﻿namespace Obligatorio_1._1;
 using Dominio;
+using System;
 
 
 class Program
@@ -19,6 +20,8 @@ class Program
 
         while (seguir)
         {
+            
+            //jj
             Console.WriteLine();
             Console.WriteLine("===== MENÚ =====");
             Console.WriteLine("1) Listar usuarios (nombre, email, equipo)");   
