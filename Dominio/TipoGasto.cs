@@ -1,0 +1,7 @@
+namespace Dominio;
+
+public class Gasto
+{
+    public string Nombre { get; set; }
+    public string Descripcion { get; set; }
+}
