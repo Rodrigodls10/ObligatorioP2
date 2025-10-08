@@ -31,6 +31,9 @@ class Program
             Console.Write("Opción: ");
             string op = Console.ReadLine();
 
+            //todos estos metodos hay que ponerlos dentro de un try and catch para poder manejar las excepciones
+
+
             if (op == "1")
             {
                 sistema.ImprimirUsuarios();                // implementar metodo en sistema
