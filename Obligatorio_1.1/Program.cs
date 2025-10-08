@@ -7,54 +7,68 @@ class Program
     static void Main(string[] args)
     {
         Sistema sistema = new Sistema();
-        
-        foreach (Usuario u in sistema.ListaUsuarios())
-        {
-            Console.WriteLine(u); 
-        }
-        
-        Console.WriteLine("Ingrese un usuario");
-        
-        string nombre = Console.ReadLine();
-        string apellidos = Console.ReadLine();
-        string email = Console.ReadLine();
-        string contrasena = Console.ReadLine();
-        DateTime fechaIngreso = DateTime.Now;
-        Console.WriteLine("Seleccione un equipo escribiendo su nombre:");
-        foreach (Equipo eq in sistema.Equipos)
-        {
-            Console.WriteLine("- " + eq.Nombre);
-        }
-        string nombreEquipo = Console.ReadLine();
+        Menu(sistema);
 
-        Equipo equipoSeleccionado = null;
 
-        // Buscar el equipo con un foreach
-        foreach (Equipo eq in sistema.Equipos)
+
+    }
+
+    static void Menu(Sistema sistema)
+    {
+        bool seguir = true;
+
+        while (seguir)
         {
-            if (eq.Nombre == nombreEquipo)
+            Console.WriteLine();
+            Console.WriteLine("===== MENÚ =====");
+            Console.WriteLine("1) Listar usuarios (nombre, email, equipo)");   
+            Console.WriteLine("2) Listar pagos por correo");                    
+            Console.WriteLine("3) Alta de usuario (email automático)");         
+            Console.WriteLine("4) Listar usuarios por equipo");                 
+            Console.WriteLine("0) Salir");
+            Console.Write("Opción: ");
+            string op = Console.ReadLine();
+
+            if (op == "1")
             {
-                equipoSeleccionado = eq;
-                break; // encontramos el equipo, salimos del foreach
+                sistema.ImprimirUsuarios();                // implementar metodo en sistema
+            }
+            else if (op == "2")
+            {
+                Console.Write("Correo: ");
+                string correo = Console.ReadLine();
+                sistema.ImprimirPagosPorCorreo(correo);   // implementar metodo en sistema
+            }
+            else if (op == "3")
+            {
+                Console.Write("Nombre: ");
+                string nombre = Console.ReadLine();
+                Console.Write("Apellido: ");
+                string apellido = Console.ReadLine();
+                Console.Write("Contraseña (mín 8): ");
+                string contrasena = Console.ReadLine();
+
+                Console.WriteLine("Equipos disponibles:");
+                sistema.ImprimirNombresEquipos();          // lista equipos hacerlo en sistema
+                Console.Write("Equipo: ");
+                string nombreEquipo = Console.ReadLine();
+
+                sistema.AltaUsuarioConEmailAuto(nombre, apellido, contrasena, nombreEquipo);
+            }
+            else if (op == "4")
+            {
+                Console.Write("Nombre de equipo: ");
+                string nombreEquipo = Console.ReadLine();
+                sistema.ImprimirUsuariosPorEquipo(nombreEquipo); // hacerlo en sistema
+            }
+            else if (op == "0")
+            {
+                seguir = false;
+            }
+            else
+            {
+                Console.WriteLine("Opción inválida.");
             }
         }
-
-        // Si no encontró coincidencia, asignar un equipo por defecto
-        if (equipoSeleccionado == null)
-        {
-            Console.WriteLine("No se encontró el equipo. Se asignará el primer equipo por defecto.");
-            equipoSeleccionado = sistema.Equipos[0];
-        }
-
-        Usuario usuarioNuevo = new Usuario(nombre, apellidos, contrasena, email, fechaIngreso, equipoSeleccionado);
-        
-        sistema.AgregarUsuario(usuarioNuevo);
-        foreach (Usuario u in sistema.ListaUsuarios())
-        {
-            Console.WriteLine(u); 
-        }
-
-       
-
     }
 }
