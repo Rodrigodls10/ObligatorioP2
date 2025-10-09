@@ -1,6 +1,6 @@
 namespace Dominio;
 
-public class Pago
+public abstract class Pago
 {
     public static int siguienteId = 1;
     public int Id { get; set; }
@@ -12,13 +12,39 @@ public class Pago
 
     public string Descripcion { get; set; }
 
+    public decimal Monto { get; set; }
 
-    public Pago(MetodoPago metodo, TipoGasto tipoGasto, Usuario usuario, string descripcion)
+
+    public Pago(MetodoPago metodo, TipoGasto tipoGasto, Usuario usuario, string descripcion, decimal monto)
     {
         Id = siguienteId++;
         Metodo = metodo;
         TipoGasto = tipoGasto;
         Usuario = usuario;
         Descripcion = descripcion;
+        Monto = monto;
+
+        if (Usuario == null)
+        {
+            throw new Exception("El pago debe tener un usuario.");
+        }
+
+        if (TipoGasto == null)
+        {
+            throw new Exception("El pago debe tener un tipo de gasto.");
+        }
+
+        if (Monto <= 0)
+        {
+            throw new Exception("El monto debe ser mayor a cero.");
+        }
     }
+
+    //Estos metodos los vamos a sobreescribir en las clases hijas y los vamos a implementar en sistema
+  
+
+    public abstract decimal CalcularTotal();
+    public abstract bool EstaActivoEnMes(DateTime referencia);
+    public abstract decimal ImporteDelMes(DateTime referencia);
+    
 }
