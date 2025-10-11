@@ -16,15 +16,23 @@ public class Equipo
         this.Nombre = Nombre;
         this.Usuarios = Usuarios;
     }
-    
+
     public override string ToString()
     {
-        return "Equipo: " + this.Nombre + ", Id: " + this.Id;
-        
-        
+        string resultado = $"Equipo: {Nombre}\n";
+
+        foreach (Usuario u in Usuarios)
+        {
+            resultado += $"{u.Nombre} - {u.Email}\n";
+        }
+
+        return resultado;
     }
 
-    
+
+
+
+
 }
 
 

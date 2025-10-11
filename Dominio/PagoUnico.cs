@@ -11,7 +11,7 @@ namespace Dominio
         public DateTime fechaPago;
         public string nroRecibo;
 
-        public PagoUnico(MetodoPago metodo, TipoGasto tipoGasto, Usuario usuario, string descripcion, DateTime fechaPago, string nroRecibo, decimal monto ) 
+        public PagoUnico(MetodoPago metodo, TipoGasto tipoGasto, Usuario usuario, string descripcion, DateTime fechaPago, string nroRecibo, double monto ) 
             : base(metodo, tipoGasto, usuario, descripcion, monto)
         {
             this.fechaPago = fechaPago;
@@ -23,22 +23,22 @@ namespace Dominio
             }
         }
 
-        public override decimal CalcularTotal()
+        public override double CalcularTotal()
         {
-            decimal descuento = 0.10m; // 10% de descuento
+            double descuento = 0.10; // 10% de descuento
 
             if (Metodo == MetodoPago.EFECTIVO)
             {
-                descuento = 0.20m; // 20% de descuento
+                descuento = 0.20; // 20% de descuento
             }
 
-            decimal total = Monto - (Monto * descuento);
+            double total = Monto - (Monto * descuento);
             return total;
         }
 
-        public override bool EstaActivoEnMes(DateTime referencia)
+        public override bool EstaActivoEnMes(DateTime fechaReferencia)
         {
-            if (fechaPago.Year == referencia.Year && fechaPago.Month == referencia.Month)
+            if (fechaPago.Year == fechaReferencia.Year && fechaPago.Month == fechaReferencia.Month)
             {
                 return true;
             }
@@ -49,17 +49,7 @@ namespace Dominio
             }
         }
 
-        public override decimal ImporteDelMes(DateTime referencia)
-        {
-            if (EstaActivoEnMes(referencia))
-            {
-                return CalcularTotal();
-            }
-            else
-            {
-                return 0;
-            }
-        }
+     
 
         public override string ToString()
         {

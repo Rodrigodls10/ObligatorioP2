@@ -12,10 +12,10 @@ public abstract class Pago
 
     public string Descripcion { get; set; }
 
-    public decimal Monto { get; set; }
+    public double Monto { get; set; }
 
 
-    public Pago(MetodoPago metodo, TipoGasto tipoGasto, Usuario usuario, string descripcion, decimal monto)
+    public Pago(MetodoPago metodo, TipoGasto tipoGasto, Usuario usuario, string descripcion, double monto)
     {
         Id = siguienteId++;
         Metodo = metodo;
@@ -43,8 +43,8 @@ public abstract class Pago
     //Estos metodos los vamos a sobreescribir en las clases hijas y los vamos a implementar en sistema
   
 
-    public abstract decimal CalcularTotal();
-    public abstract bool EstaActivoEnMes(DateTime referencia);
-    public abstract decimal ImporteDelMes(DateTime referencia);
+    public abstract double CalcularTotal();
+    public abstract bool EstaActivoEnMes(DateTime fechaReferencia);
+    
     
 }

@@ -36,13 +36,18 @@ class Program
 
             if (op == "1")
             {
-                sistema.ImprimirUsuarios();                // implementar metodo en sistema
+               Console.WriteLine( sistema.ListaUsuarios());                // implementar metodo en sistema
             }
             else if (op == "2")
             {
                 Console.Write("Correo: ");
                 string correo = Console.ReadLine();
-                sistema.ImprimirPagosPorCorreo(correo);   // implementar metodo en sistema
+                List<Pago> pagos = sistema.ListarPagosCorreo(correo); 
+                Console.WriteLine("Pagos encontrados:");
+                foreach (Pago p in pagos)
+                {
+                    Console.WriteLine(p);
+                }
             }
             else if (op == "3")
             {
@@ -54,17 +59,33 @@ class Program
                 string contrasena = Console.ReadLine();
 
                 Console.WriteLine("Equipos disponibles:");
-                sistema.ImprimirNombresEquipos();          // lista equipos hacerlo en sistema
+               
                 Console.Write("Equipo: ");
-                string nombreEquipo = Console.ReadLine();
+                List<Equipo> equipos = sistema.ListarEquipos(); // listar equipos disponibles
+                foreach (Equipo e in equipos)
+                {
+                    Console.WriteLine(e.Nombre);
+                }
 
-                sistema.AltaUsuarioConEmailAuto(nombre, apellido, contrasena, nombreEquipo);
+                string nombreEquipo = Console.ReadLine();
+                Usuario nuevoUsuario  = new Usuario(nombre, apellido, contrasena, DateTime.Now);
+                sistema.AltaUsuario(nuevoUsuario, nombreEquipo); // implementar metodo en sistema
+                Console.WriteLine("Usuario Agregado Exitosamente");
             }
             else if (op == "4")
             {
                 Console.Write("Nombre de equipo: ");
                 string nombreEquipo = Console.ReadLine();
-                sistema.ImprimirUsuariosPorEquipo(nombreEquipo); // hacerlo en sistema
+                List<Equipo> equipos = sistema.ListarEquipos(); // listar equipos disponibles
+                foreach (Equipo e in equipos)
+                {
+                    foreach (Usuario u in e.Usuarios)
+                    {
+                        Console.WriteLine(u);
+                    }   
+                }
+
+                
             }
             else if (op == "0")
             {

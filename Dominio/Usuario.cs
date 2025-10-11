@@ -1,7 +1,7 @@
 using System.IO.IsolatedStorage;
 using System.Runtime.CompilerServices;
 
-namespace Dominio;
+namespace Dominio;  
 
 public class Usuario
 {
