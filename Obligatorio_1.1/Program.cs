@@ -36,7 +36,12 @@ class Program
 
             if (op == "1")
             {
-               Console.WriteLine( sistema.ListaUsuarios());                // implementar metodo en sistema
+               Console.WriteLine("Lista de Usuarios"); 
+               List<Usuario> usuarios = sistema.ListaUsuarios();
+               foreach (Usuario u in usuarios)
+               {
+                   Console.WriteLine(u);
+               }              
             }
             else if (op == "2")
             {
