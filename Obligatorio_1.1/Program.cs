@@ -36,52 +36,83 @@ class Program
 
             if (op == "1")
             {
-               Console.WriteLine("Lista de Usuarios"); 
-               List<Usuario> usuarios = sistema.ListaUsuarios();
-               foreach (Usuario u in usuarios)
-               {
-                   Console.WriteLine(u);
-               }              
+                try
+                {
+                    Console.WriteLine("Lista de Usuarios"); 
+                    List<Usuario> usuarios = sistema.ListaUsuarios();
+                    foreach (Usuario u in usuarios)
+                    {
+                        Console.WriteLine(u);
+                    }         
+
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Error al listar Usuarios" + e);
+                    
+                }
+                    
             }
             else if (op == "2")
             {
-                Console.Write("Correo: ");
-                string correo = Console.ReadLine();
-                List<Pago> pagos = sistema.ListarPagosCorreo(correo); 
-                Console.WriteLine("Pagos encontrados:");
-                foreach (Pago p in pagos)
+                try
                 {
-                    Console.WriteLine(p);
+                    Console.Write("Correo: ");
+                    string correo = Console.ReadLine();
+                    List<Pago> pagos = sistema.ListarPagosCorreo(correo); 
+                    Console.WriteLine("Pagos encontrados:");
+                    foreach (Pago p in pagos)
+                    {
+                        Console.WriteLine(p);
+                    }
+
                 }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Error buscando Pagos" + e);
+                    ;
+                }
+                
             }
             else if (op == "3")
             {
-                Console.Write("Nombre: ");
-                string nombre = Console.ReadLine();
-                Console.Write("Apellido: ");
-                string apellido = Console.ReadLine();
-                Console.Write("Contraseña (mín 8): ");
-                string contrasena = Console.ReadLine();
-
-                Console.WriteLine("Equipos disponibles:");
-               
-                Console.Write("Equipo: ");
-                List<Equipo> equipos = sistema.ListarEquipos(); // listar equipos disponibles
-                foreach (Equipo e in equipos)
+                try
                 {
-                    Console.WriteLine(e.Nombre);
-                }
+                    Console.Write("Nombre: ");
+                    string nombre = Console.ReadLine();
+                    Console.Write("Apellido: ");
+                    string apellido = Console.ReadLine();
+                    Console.Write("Contraseña (mín 8): ");
+                    string contrasena = Console.ReadLine();
 
-                string nombreEquipo = Console.ReadLine();
-                Usuario nuevoUsuario  = new Usuario(nombre, apellido, contrasena, DateTime.Now);
-                sistema.AltaUsuario(nuevoUsuario, nombreEquipo); // implementar metodo en sistema
-                Console.WriteLine("Usuario Agregado Exitosamente");
+                    Console.WriteLine("Equipos disponibles:");
+               
+                    Console.Write("Equipo: ");
+                    List<Equipo> equipos = sistema.ListarEquipos(); // listar equipos disponibles
+                    foreach (Equipo e in equipos)
+                    {
+                        Console.WriteLine(e.Nombre);
+                    }
+
+                    string nombreEquipo = Console.ReadLine();
+                    Usuario nuevoUsuario  = new Usuario(nombre, apellido, contrasena, DateTime.Now);
+                    sistema.AltaUsuario(nuevoUsuario, nombreEquipo); // implementar metodo en sistema
+                    Console.WriteLine("Usuario Agregado Exitosamente");
+
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    
+                        
+                }
+                
             }
             else if (op == "4")
             {
                 Console.Write("Nombre de equipo: ");
                 string nombreEquipo = Console.ReadLine();
-                List<Equipo> equipos = sistema.ListarEquipos(); // listar equipos disponibles
+                List<Equipo> equipos = sistema.ListarUsuarioPorEquipo(nombreEquipo); // listar equipos disponibles
                 foreach (Equipo e in equipos)
                 {
                     foreach (Usuario u in e.Usuarios)

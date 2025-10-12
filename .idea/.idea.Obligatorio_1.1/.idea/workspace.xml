@@ -8,8 +8,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a022c7f4-0a20-4110-bd20-a238dba0858e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Obligatorio_1.1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Obligatorio_1.1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dominio/Sistema.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/Sistema.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Obligatorio_1.1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Obligatorio_1.1/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,6 +107,15 @@
       <workItem from="1759930737106" duration="1596000" />
       <workItem from="1759944607411" duration="1500000" />
     </task>
+    <task id="LOCAL-00001" summary="Listar usuarios Final">
+      <option name="closed" value="true" />
+      <created>1760312267648</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1760312267648</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +136,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Listar usuarios Final" />
+    <option name="LAST_COMMIT_MESSAGE" value="Listar usuarios Final" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
