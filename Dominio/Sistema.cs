@@ -26,10 +26,10 @@ public class Sistema
         Equipo g4 = new Equipo(4, "Marketing", new List<Usuario>());
 
         // Agregar equipos al sistema
-        this.Equipos.Add(g1);
-        this.Equipos.Add(g2);
-        this.Equipos.Add(g3);
-        this.Equipos.Add(g4);
+        this.AltaEquipo(g1);
+        this.AltaEquipo(g2);
+        this.AltaEquipo(g3);
+        this.AltaEquipo(g4);
 
         // ====== USUARIOS ======
         Usuario u1 = new Usuario("Ana", "Lopez", "password123", hoy.AddDays(-10));
@@ -118,10 +118,11 @@ public class Sistema
         PagoUnico p17 = new PagoUnico(MetodoPago.EFECTIVO, t7, u17, "Pago unico 17", hoy.AddDays(-19), "R017", 3100);
 
         // Agregar pagos Unicos a la lista
-        this.Pagos.Add(p1); this.Pagos.Add(p2); this.Pagos.Add(p3); this.Pagos.Add(p4); this.Pagos.Add(p5);
-        this.Pagos.Add(p6); this.Pagos.Add(p7); this.Pagos.Add(p8); this.Pagos.Add(p9); this.Pagos.Add(p10);
-        this.Pagos.Add(p11); this.Pagos.Add(p12); this.Pagos.Add(p13); this.Pagos.Add(p14); this.Pagos.Add(p15);
-        this.Pagos.Add(p16); this.Pagos.Add(p17);
+        this.AltaPago(p1); this.AltaPago(p2); this.AltaPago(p3); this.AltaPago(p4); this.AltaPago(p5);
+        this.AltaPago(p6); this.AltaPago(p7); this.AltaPago(p8); this.AltaPago(p9); this.AltaPago(p10);
+        this.AltaPago(p11); this.AltaPago(p12); this.AltaPago(p13); this.AltaPago(p14); this.AltaPago(p15);
+        this.AltaPago(p16); this.AltaPago(p17);
+
 
         // ====== PAGOS RECURRENTES (25) ======
         // 5 TERMINADOS
@@ -156,12 +157,13 @@ public class Sistema
         PagoRecurrente r25 = new PagoRecurrente(MetodoPago.EFECTIVO, t10, u3, "Suscripcion sin fin 10", hoy.AddMonths(-1), hoy.AddYears(5), false, 2700);
 
         // Agregar pagos recurrentes a la lista
-        this.Pagos.Add(r1); this.Pagos.Add(r2); this.Pagos.Add(r3); this.Pagos.Add(r4); this.Pagos.Add(r5);
-        this.Pagos.Add(r6); this.Pagos.Add(r7); this.Pagos.Add(r8); this.Pagos.Add(r9); this.Pagos.Add(r10);
-        this.Pagos.Add(r11); this.Pagos.Add(r12); this.Pagos.Add(r13); this.Pagos.Add(r14); this.Pagos.Add(r15);
-        this.Pagos.Add(r16); this.Pagos.Add(r17); this.Pagos.Add(r18); this.Pagos.Add(r19); this.Pagos.Add(r20);
-        this.Pagos.Add(r21); this.Pagos.Add(r22); this.Pagos.Add(r23); this.Pagos.Add(r24); this.Pagos.Add(r25);
+        this.AltaPago(r1); this.AltaPago(r2); this.AltaPago(r3); this.AltaPago(r4); this.AltaPago(r5);
+        this.AltaPago(r6); this.AltaPago(r7); this.AltaPago(r8); this.AltaPago(r9); this.AltaPago(r10);
+        this.AltaPago(r11); this.AltaPago(r12); this.AltaPago(r13); this.AltaPago(r14); this.AltaPago(r15);
+        this.AltaPago(r16); this.AltaPago(r17); this.AltaPago(r18); this.AltaPago(r19); this.AltaPago(r20);
+        this.AltaPago(r21); this.AltaPago(r22); this.AltaPago(r23); this.AltaPago(r24); this.AltaPago(r25);
     }
+    
 
 
 
@@ -183,7 +185,7 @@ public class Sistema
         List<Pago> ListaUsuariosFiltrados = new List<Pago>();
         foreach (Pago p in this.Pagos)
         {
-            if (p.Usuario.Email == correo)
+            if (p.Usuario.Email.ToLower() == correo.ToLower())
             {
                 ListaUsuariosFiltrados.Add(p);
             }
@@ -302,5 +304,73 @@ public class Sistema
 
         return equiposFiltrados;
     }
+
+    public void AltaEquipo(Equipo e)
+    {
+        if (e == null)
+        {
+            throw new Exception("Equipo inválido.");
+        }
+        if (e.Nombre == null || e.Nombre == "")
+        {
+            throw new Exception("El nombre del equipo no puede estar vacío.");
+        }
+
+        // Validar duplicado 
+        foreach (Equipo existente in this.Equipos)
+        {
+            if (existente.Id == e.Id) // Validacion por id
+            {
+                throw new Exception("Ya existe un equipo con el mismo ID.");
+            }
+        }
+
+        // Validar duplicado por nombre 
+        foreach (Equipo existente in this.Equipos)
+        {
+            if (existente.Nombre != null && e.Nombre != null && existente.Nombre.ToLower() == e.Nombre.ToLower())
+            {
+                throw new Exception("Ya existe un equipo con el mismo nombre.");
+            }
+        }
+
+        this.Equipos.Add(e);
+    }
+
+    public void AltaPago(Pago p)
+    {
+        if (p == null)
+        {
+            throw new Exception("Pago inválido.");
+        }
+        if (p.Usuario == null)
+        {
+            throw new Exception("El pago debe tener un usuario asociado.");
+        }
+
+        // Validar que el usuario del pago exista en el sistema (por referencia o por email)
+        bool existeUsuario = false;
+        foreach (Usuario u in this.Usuarios)
+        {
+            if (object.ReferenceEquals(u, p.Usuario))
+            {
+                existeUsuario = true;
+                break;
+            }
+            if (u.Email != null && p.Usuario.Email != null && u.Email.ToLower() == p.Usuario.Email.ToLower())
+            {
+                existeUsuario = true;
+                break;
+            }
+        }
+
+        if (!existeUsuario)
+        {
+            throw new Exception("El usuario del pago no está dado de alta en el sistema.");
+        }
+
+        this.Pagos.Add(p);
+    }
+
 
 }

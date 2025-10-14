@@ -78,7 +78,7 @@ class Program
                         List<Equipo> equipos = sistema.ListarEquipos();
                         foreach (Equipo e in equipos)
                         {
-                            Console.WriteLine(e.Nombre);
+                            Console.WriteLine($"{e.Id}-{e.Nombre}");
                         }
 
                         Console.Write("Equipo: ");
@@ -103,11 +103,12 @@ class Program
                 case "4":
                     try
                     {
-                        Console.Write("Nombre de equipo: ");
+                        Console.WriteLine("Ingrese el Nombre de Equipo: ");
                         List<Equipo> equiposUser = sistema.ListarEquipos();
                         foreach (Equipo e in equiposUser)
                         {
-                            Console.WriteLine(e.Nombre);
+                            Console.WriteLine(" -------- ");
+                            Console.WriteLine($"{e.Id}-{e.Nombre}");
                         }
 
                         string nombreEquipo = Console.ReadLine();
