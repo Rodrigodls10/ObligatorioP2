@@ -44,7 +44,7 @@ public abstract class Pago
   
 
     public abstract double CalcularTotal();
-    public abstract bool EstaActivoEnMes(DateTime fechaReferencia);
+    
     
     
 }

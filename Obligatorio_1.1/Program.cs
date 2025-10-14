@@ -48,7 +48,7 @@ class Program
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("Error al listar Usuarios" + e);
+                    Console.WriteLine(e.Message);
                     
                 }
                     
@@ -69,7 +69,7 @@ class Program
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("Error buscando Pagos" + e);
+                    Console.WriteLine(e.Message);
                     ;
                 }
                 
@@ -102,24 +102,42 @@ class Program
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine(e);
+                    Console.WriteLine(e.Message);
                     
                         
+                            
                 }
                 
             }
             else if (op == "4")
             {
-                Console.Write("Nombre de equipo: ");
-                string nombreEquipo = Console.ReadLine();
-                List<Equipo> equipos = sistema.ListarUsuarioPorEquipo(nombreEquipo); // listar equipos disponibles
-                foreach (Equipo e in equipos)
+                try
                 {
-                    foreach (Usuario u in e.Usuarios)
+                    Console.Write("Nombre de equipo: ");
+                    List<Equipo> equiposUser = sistema.ListarEquipos();
+                    foreach (Equipo e in equiposUser)
                     {
-                        Console.WriteLine(u);
-                    }   
+                        Console.WriteLine(e.Nombre);
+                    }
+                    
+                    string nombreEquipo = Console.ReadLine();
+                    List<Equipo> equipos = sistema.ListarUsuarioPorEquipo(nombreEquipo); // listar equipos disponibles
+                    foreach (Equipo e in equipos)
+                    {
+                        foreach (Usuario u in e.Usuarios)
+                        {
+                            Console.WriteLine(u);
+                        }   
+                    }
+
                 }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                    ;
+                }
+                
+                
 
                 
             }

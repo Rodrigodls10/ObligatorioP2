@@ -76,12 +76,12 @@ namespace Dominio
             return total;
         }
 
-        public override bool EstaActivoEnMes(DateTime fechaReferencia)
+        public bool EstaActivoEnMes()
         {
             // Si el pago no tiene límite (sin fechaHasta), siempre está activo
             if (!tieneLimite)
             {
-                if (fechaReferencia >= fechaDesde)
+                if (DateTime.Now.Month >= fechaDesde.Month)
                 {
                     return true;
                 }
@@ -93,7 +93,7 @@ namespace Dominio
             else
             {
                 // Con límite activo si la fecha de referencia está entre fechaDesde y fechaHasta
-                if (fechaReferencia >= fechaDesde && fechaReferencia <= fechaHasta)
+                if (DateTime.Now.Month  >= fechaDesde.Month && DateTime.Now.Month <= fechaHasta.Month)
                 {
                     return true;
                 }

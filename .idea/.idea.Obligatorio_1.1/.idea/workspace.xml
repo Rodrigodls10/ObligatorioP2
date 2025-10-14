@@ -8,6 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a022c7f4-0a20-4110-bd20-a238dba0858e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Obligatorio_1.1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Obligatorio_1.1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dominio/PagoUnico.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/PagoUnico.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dominio/Sistema.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/Sistema.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dominio/Usuario.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/Usuario.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Obligatorio_1.1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Obligatorio_1.1/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +119,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760312267648</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Try and Catch">
+      <option name="closed" value="true" />
+      <created>1760312989974</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1760312989974</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,7 +149,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Listar usuarios Final" />
-    <option name="LAST_COMMIT_MESSAGE" value="Listar usuarios Final" />
+    <MESSAGE value="Try and Catch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Try and Catch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

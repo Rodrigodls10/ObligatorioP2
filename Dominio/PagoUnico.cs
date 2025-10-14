@@ -36,18 +36,7 @@ namespace Dominio
             return total;
         }
 
-        public override bool EstaActivoEnMes(DateTime fechaReferencia)
-        {
-            if (fechaPago.Year == fechaReferencia.Year && fechaPago.Month == fechaReferencia.Month)
-            {
-                return true;
-            }
-
-            else
-            {
-                return false;
-            }
-        }
+       
 
      
 
