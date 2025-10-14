@@ -17,6 +17,32 @@ public class Equipo
         this.Usuarios = Usuarios;
     }
 
+
+    public void AgregarUsuario(Usuario u)
+    {
+        if (Usuarios == null)
+        {
+            Usuarios = new List<Usuario>();
+        }
+
+        bool yaEsta = false;
+        foreach (Usuario ux in Usuarios)
+        {
+            if (ux.Email == u.Email)
+            {
+                yaEsta = true;
+                break;
+            }
+        }
+
+        if (yaEsta)
+        {
+            throw new Exception("El usuario ya pertenece al equipo: " + Nombre);
+        }
+
+        Usuarios.Add(u);
+    }
+
     public override string ToString()
     {
         string resultado = $"Equipo: {Nombre}\n";

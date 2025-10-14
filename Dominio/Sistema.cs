@@ -56,28 +56,29 @@ public class Sistema
         Usuario u22 = new Usuario("Walter", "Farias", "password123", hoy.AddDays(-10));
 
         // Agregar usuarios al sistema
-        this.Usuarios.Add(u1);
-        this.Usuarios.Add(u2);
-        this.Usuarios.Add(u3);
-        this.Usuarios.Add(u4);
-        this.Usuarios.Add(u5);
-        this.Usuarios.Add(u6);
-        this.Usuarios.Add(u7);
-        this.Usuarios.Add(u8);
-        this.Usuarios.Add(u9);
-        this.Usuarios.Add(u10);
-        this.Usuarios.Add(u11);
-        this.Usuarios.Add(u12);
-        this.Usuarios.Add(u13);
-        this.Usuarios.Add(u14);
-        this.Usuarios.Add(u15);
-        this.Usuarios.Add(u16);
-        this.Usuarios.Add(u17);
-        this.Usuarios.Add(u18);
-        this.Usuarios.Add(u19);
-        this.Usuarios.Add(u20);
-        this.Usuarios.Add(u21);
-        this.Usuarios.Add(u22);
+        this.AltaUsuario(u1);
+        this.AltaUsuario(u2);
+        this.AltaUsuario(u3);
+        this.AltaUsuario(u4);
+        this.AltaUsuario(u5);
+        this.AltaUsuario(u6);
+        this.AltaUsuario(u7);
+        this.AltaUsuario(u8);
+        this.AltaUsuario(u9);
+        this.AltaUsuario(u10);
+        this.AltaUsuario(u11);
+        this.AltaUsuario(u12);
+        this.AltaUsuario(u13);
+        this.AltaUsuario(u14);
+        this.AltaUsuario(u15);
+        this.AltaUsuario(u16);
+        this.AltaUsuario(u17);
+        this.AltaUsuario(u18);
+        this.AltaUsuario(u19);
+        this.AltaUsuario(u20);
+        this.AltaUsuario(u21);
+        this.AltaUsuario(u22);
+
 
         // Asignar usuarios a equipos (reparto simple 22 = 6/6/5/5)
         g1.Usuarios.Add(u1); g1.Usuarios.Add(u2); g1.Usuarios.Add(u3); g1.Usuarios.Add(u4); g1.Usuarios.Add(u5); g1.Usuarios.Add(u6);
@@ -191,7 +192,7 @@ public class Sistema
     }
 
 
-    public void AltaUsuario(Usuario u, string nombreEquipo)
+    public void AltaUsuario(Usuario u)
     {
         string emailGenerado = GenerarEmail(u.Nombre, u.Apellido);
         u.Email = emailGenerado;
@@ -200,13 +201,18 @@ public class Sistema
         ValidarExistencia(u);
         this.Usuarios.Add(u);
 
+        
+    }
+
+    public void AsignarUsuarioAEquipo(Usuario u, string nombreEquipo)
+    {
         bool asignado = false;
+
         foreach (Equipo e in this.Equipos)
         {
-            if (e.Nombre.ToLower() == nombreEquipo.ToLower())
+            if (e.Nombre != null && nombreEquipo != null && e.Nombre.ToLower() == nombreEquipo.ToLower())
             {
-                if (e.Usuarios == null) e.Usuarios = new List<Usuario>();
-                e.Usuarios.Add(u);      
+                e.AgregarUsuario(u);
                 asignado = true;
                 break;
             }
@@ -217,7 +223,9 @@ public class Sistema
             throw new Exception("Equipo no encontrado: " + nombreEquipo);
         }
     }
-    
+
+
+
     private string GenerarEmail(string nombre, string apellido)
     {
         string parteNombre = "";
