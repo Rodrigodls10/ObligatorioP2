@@ -4,14 +4,24 @@ namespace Dominio;
 
 public class Sistema
 {
+    private static Sistema instancia;
     public List<Equipo> Equipos { get; set; } = new List<Equipo>();
     public List<Usuario> Usuarios { get; set; } = new List<Usuario>();
    
     public List<Pago> Pagos { get; set; } = new List<Pago>();
 
-    public Sistema()
+    private Sistema()
     {
         PrecargarDatos();
+    }
+
+    public static Sistema ObtenerInstancia()
+    {
+        if (instancia == null)
+        {
+            instancia = new Sistema();
+        }
+        return instancia;
     }
 
 
