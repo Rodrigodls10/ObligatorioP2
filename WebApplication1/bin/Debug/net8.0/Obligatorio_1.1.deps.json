@@ -6,13 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "WebApplication1/1.0.0": {
+      "Obligatorio_1.1/1.0.0": {
         "dependencies": {
-          "Dominio": "1.0.0",
-          "Obligatorio_1.1": "1.0.0"
+          "Dominio": "1.0.0"
         },
         "runtime": {
-          "WebApplication1.dll": {}
+          "Obligatorio_1.1.dll": {}
         }
       },
       "Dominio/1.0.0": {
@@ -22,32 +21,16 @@
             "fileVersion": "1.0.0.0"
           }
         }
-      },
-      "Obligatorio_1.1/1.0.0": {
-        "dependencies": {
-          "Dominio": "1.0.0"
-        },
-        "runtime": {
-          "Obligatorio_1.1.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
       }
     }
   },
   "libraries": {
-    "WebApplication1/1.0.0": {
+    "Obligatorio_1.1/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "Dominio/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Obligatorio_1.1/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

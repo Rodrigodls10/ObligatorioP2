@@ -6,8 +6,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Sistema sistema = new Sistema();
-        Menu(sistema);
+        Sistema s = Sistema.ObtenerInstancia();
+        Menu(s);
     }
 
     static void Menu(Sistema sistema)

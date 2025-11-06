@@ -1,0 +1,40 @@
+@{
+    ViewData["Title"] = "Cargar nuevo tipo de gasto";
+}
+
+<h2>Cargar nuevo tipo de gasto</h2>
+
+@if (ViewBag.Mensaje != null)
+{
+    <p style="color: green">@ViewBag.Mensaje</p>
+}
+
+<form method="post" action="/TipoGasto/CrearTipoGasto">
+    <label>Nombre:</label>
+    <input type="text" name="nombre" /> <br />
+
+    <label>Descripción:</label>
+    <input type="text" name="descripcion" /> <br />
+
+    <button type="submit">Guardar</button>
+</form>
+
+<hr />
+
+<h3>Tipos de gasto existentes</h3>
+
+@if (ViewBag.Tipos != null && ViewBag.Tipos.Count > 0)
+{
+    <ul>
+        @foreach (var t in ViewBag.Tipos)
+        {
+            <li><b>@t.Nombre</b> - @t.Descripcion</li>
+        }
+    </ul>
+}
+else
+{
+    <p>No hay tipos de gasto cargados.</p>
+}
+
+

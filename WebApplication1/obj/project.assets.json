@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "Dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dominio.dll": {}
+        }
+      },
+      "Obligatorio_1.1/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Dominio": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Obligatorio_1.1.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Obligatorio_1.1.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Dominio/1.0.0": {
+      "type": "project",
+      "path": "../Dominio/Dominio.csproj",
+      "msbuildProject": "../Dominio/Dominio.csproj"
+    },
+    "Obligatorio_1.1/1.0.0": {
+      "type": "project",
+      "path": "../Obligatorio_1.1/Obligatorio_1.1.csproj",
+      "msbuildProject": "../Obligatorio_1.1/Obligatorio_1.1.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "Dominio >= 1.0.0",
+      "Obligatorio_1.1 >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/Users/rodrigodelossantos/.nuget/packages/": {}
@@ -31,7 +69,14 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/rodrigodelossantos/Desktop/RiderProjects/Obligatorio_1.1/Dominio/Dominio.csproj": {
+              "projectPath": "/Users/rodrigodelossantos/Desktop/RiderProjects/Obligatorio_1.1/Dominio/Dominio.csproj"
+            },
+            "/Users/rodrigodelossantos/Desktop/RiderProjects/Obligatorio_1.1/Obligatorio_1.1/Obligatorio_1.1.csproj": {
+              "projectPath": "/Users/rodrigodelossantos/Desktop/RiderProjects/Obligatorio_1.1/Obligatorio_1.1/Obligatorio_1.1.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

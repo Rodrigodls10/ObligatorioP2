@@ -9,6 +9,9 @@ public class Sistema
     public List<Usuario> Usuarios { get; set; } = new List<Usuario>();
    
     public List<Pago> Pagos { get; set; } = new List<Pago>();
+    
+    public List<TipoGasto> TiposGasto { get; set; } = new List<TipoGasto>();
+
 
     private Sistema()
     {
@@ -107,6 +110,17 @@ public class Sistema
         TipoGasto t8 = new TipoGasto(); t8.Nombre = "Mantenimiento"; t8.Descripcion = "Reparaciones y mantenimiento";
         TipoGasto t9 = new TipoGasto(); t9.Nombre = "Capacitacion"; t9.Descripcion = "Cursos y entrenamientos";
         TipoGasto t10 = new TipoGasto(); t10.Nombre = "Otros"; t10.Descripcion = "Gastos varios";
+        
+        this.TiposGasto.Add(t1);
+        this.TiposGasto.Add(t2);
+        this.TiposGasto.Add(t3);
+        this.TiposGasto.Add(t4);
+        this.TiposGasto.Add(t5);
+        this.TiposGasto.Add(t6);
+        this.TiposGasto.Add(t7);
+        this.TiposGasto.Add(t8);
+        this.TiposGasto.Add(t9);
+        this.TiposGasto.Add(t10);
 
         // ====== PAGOS UNICOS (17) ======
         PagoUnico p1 = new PagoUnico(MetodoPago.EFECTIVO, t1, u1, "Pago unico 1", hoy.AddDays(-3), "R001", 1500);
@@ -381,6 +395,36 @@ public class Sistema
 
         this.Pagos.Add(p);
     }
+    public void AltaTipoGasto(TipoGasto tg)
+    {
+        if (tg == null)
+        {
+            throw new Exception("Tipo de gasto inválido");
+        }
+
+        if (string.IsNullOrWhiteSpace(tg.Nombre))
+        {
+            throw new Exception("El nombre es obligatorio");
+        }
+
+        // revisar que no exista uno con el mismo nombre
+        bool existe = false;
+        foreach (TipoGasto existente in this.TiposGasto)
+        {
+            if (existente.Nombre.ToLower() == tg.Nombre.ToLower())
+            {
+                existe = true;
+            }
+        }
+
+        if (existe)
+        {
+            throw new Exception("Ya existe un tipo de gasto con ese nombre.");
+        }
+
+        this.TiposGasto.Add(tg);
+    }
+
 
 
 }
