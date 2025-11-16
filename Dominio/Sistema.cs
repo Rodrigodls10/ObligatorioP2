@@ -45,28 +45,28 @@ public class Sistema
         this.AltaEquipo(g4);
 
         // ====== USUARIOS ======
-        Usuario u1 = new Usuario("Ana", "Lopez", "password123", hoy.AddDays(-10));
-        Usuario u2 = new Usuario("Bruno", "Silva", "password123", hoy.AddDays(-10));
-        Usuario u3 = new Usuario("Camila", "Ramos", "password123", hoy.AddDays(-10));
-        Usuario u4 = new Usuario("Diego", "Perez", "password123", hoy.AddDays(-10));
-        Usuario u5 = new Usuario("Elena", "Suarez", "password123", hoy.AddDays(-10));
-        Usuario u6 = new Usuario("Felipe", "Gomez", "password123", hoy.AddDays(-10));
-        Usuario u7 = new Usuario("Gabriela", "Torres", "password123", hoy.AddDays(-10));
-        Usuario u8 = new Usuario("Hugo", "Vega", "password123", hoy.AddDays(-10));
-        Usuario u9 = new Usuario("Irene", "Mendez", "password123", hoy.AddDays(-10));
-        Usuario u10 = new Usuario("Javier", "Martinez", "password123", hoy.AddDays(-10));
-        Usuario u11 = new Usuario("Karina", "Acosta", "password123", hoy.AddDays(-10));
-        Usuario u12 = new Usuario("Lucas", "Fernandez", "password123", hoy.AddDays(-10));
-        Usuario u13 = new Usuario("Marina", "Sosa", "password123", hoy.AddDays(-10));
-        Usuario u14 = new Usuario("Nicolas", "Diaz", "password123", hoy.AddDays(-10));
-        Usuario u15 = new Usuario("Olga", "Cardozo", "password123", hoy.AddDays(-10));
-        Usuario u16 = new Usuario("Pablo", "Castro", "password123", hoy.AddDays(-10));
-        Usuario u17 = new Usuario("Rocio", "Cabrera", "password123", hoy.AddDays(-10));
-        Usuario u18 = new Usuario("Santiago", "Alvarez", "password123", hoy.AddDays(-10));
-        Usuario u19 = new Usuario("Tamara", "Ibarra", "password123", hoy.AddDays(-10));
-        Usuario u20 = new Usuario("Ulises", "Nuniez", "password123", hoy.AddDays(-10));
-        Usuario u21 = new Usuario("Valeria", "Pereyra", "password123", hoy.AddDays(-10));
-        Usuario u22 = new Usuario("Walter", "Farias", "password123", hoy.AddDays(-10));
+        Usuario u1 = new Empleado("Ana", "Lopez", "password123", hoy.AddDays(-10));
+        Usuario u2 = new Gerente("Bruno", "Silva", "password123", hoy.AddDays(-10));
+        Usuario u3 = new Empleado("Camila", "Ramos", "password123", hoy.AddDays(-10));
+        Usuario u4 = new Empleado("Diego", "Perez", "password123", hoy.AddDays(-10));
+        Usuario u5 = new Empleado("Elena", "Suarez", "password123", hoy.AddDays(-10));
+        Usuario u6 = new Empleado("Felipe", "Gomez", "password123", hoy.AddDays(-10));
+        Usuario u7 = new Empleado("Gabriela", "Torres", "password123", hoy.AddDays(-10));
+        Usuario u8 = new Empleado("Hugo", "Vega", "password123", hoy.AddDays(-10));
+        Usuario u9 = new Gerente("Irene", "Mendez", "password123", hoy.AddDays(-10));
+        Usuario u10 = new Empleado("Javier", "Martinez", "password123", hoy.AddDays(-10));
+        Usuario u11 = new Empleado("Karina", "Acosta", "password123", hoy.AddDays(-10));
+        Usuario u12 = new Gerente("Lucas", "Fernandez", "password123", hoy.AddDays(-10));
+        Usuario u13 = new Empleado("Marina", "Sosa", "password123", hoy.AddDays(-10));
+        Usuario u14 = new Empleado("Nicolas", "Diaz", "password123", hoy.AddDays(-10));
+        Usuario u15 = new Gerente("Olga", "Cardozo", "password123", hoy.AddDays(-10));
+        Usuario u16 = new Empleado("Pablo", "Castro", "password123", hoy.AddDays(-10));
+        Usuario u17 = new Empleado("Rocio", "Cabrera", "password123", hoy.AddDays(-10));
+        Usuario u18 = new Gerente("Santiago", "Alvarez", "password123", hoy.AddDays(-10));
+        Usuario u19 = new Empleado("Tamara", "Ibarra", "password123", hoy.AddDays(-10));
+        Usuario u20 = new Empleado("Ulises", "Nuniez", "password123", hoy.AddDays(-10));
+        Usuario u21 = new Empleado("Valeria", "Pereyra", "password123", hoy.AddDays(-10));
+        Usuario u22 = new Empleado("Walter", "Farias", "password123", hoy.AddDays(-10));
 
         // Agregar usuarios al sistema
         this.AltaUsuario(u1);
@@ -424,7 +424,41 @@ public class Sistema
 
         this.TiposGasto.Add(tg);
     }
+    
+    public Usuario BuscarUsuarioPorEmailYPassword(string email, string password)
+    {
+        Usuario encontrado = null;
 
+        if (email == null || password == null)
+        {
+            return null;
+        }
 
+        foreach (Usuario u in this.Usuarios)
+        {
+            if (u != null && u.Email != null && u.Contrasena != null)
+            {
+                if (u.Email.ToLower() == email.ToLower() &&
+                    u.Contrasena == password)
+                {
+                    encontrado = u;
+                }
+            }
+        }
 
+        return encontrado;
+    }
+
+    public Usuario AutenticarUsuario(string email, string contrasena)
+    {
+        Usuario elU = BuscarUsuarioPorEmailYPassword(email, contrasena);
+
+        if (elU == null)
+        {
+            throw new Exception("Usuario o contraseña incorrectos");
+        }
+
+        return elU;
+    }
+    
 }

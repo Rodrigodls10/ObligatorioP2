@@ -12,15 +12,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a022c7f4-0a20-4110-bd20-a238dba0858e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/WebApplication1/Controllers/TipoGasto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApplication1/Views/TipoGasto/CrearTipoGasto.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dominio/Empleado.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dominio/Gerente.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApplication1/Controllers/LoginController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApplication1/Views/Login/Autenticar.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Obligatorio_1.1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Obligatorio_1.1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dominio/Sistema.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/Sistema.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dominio/TipoGasto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/TipoGasto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dominio/Usuario.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/Usuario.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dominio/bin/Debug/net8.0/Dominio.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/bin/Debug/net8.0/Dominio.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dominio/bin/Debug/net8.0/Dominio.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/bin/Debug/net8.0/Dominio.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/Dominio.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/Dominio.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/Dominio.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/Dominio.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/Dominio.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/Dominio.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/Dominio.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/Dominio.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/Dominio.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/Dominio.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/Dominio.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/Dominio.sourcelink.json" afterDir="false" />
@@ -34,31 +37,28 @@
       <change beforePath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/Obligatorio_1.1.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/Obligatorio_1.1.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/Obligatorio_1.1.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/Obligatorio_1.1.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/Obligatorio_1.1.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/Obligatorio_1.1.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/Obligatorio_1.1.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/Obligatorio_1.1.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/Obligatorio_1.1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/Obligatorio_1.1.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/Obligatorio_1.1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/Obligatorio_1.1.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/Obligatorio_1.1.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/Obligatorio_1.1.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/ref/Obligatorio_1.1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/ref/Obligatorio_1.1.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/refint/Obligatorio_1.1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/refint/Obligatorio_1.1.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/WebApplication1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/WebApplication1.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/net8.0/WebApplication1.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/Debug/net8.0/WebApplication1.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/net8.0/Dominio.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/Debug/net8.0/Dominio.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/net8.0/Dominio.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/Debug/net8.0/Dominio.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/net8.0/Obligatorio_1.1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/Debug/net8.0/Obligatorio_1.1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/net8.0/Obligatorio_1.1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/Debug/net8.0/Obligatorio_1.1.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/net8.0/WebApplication1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/Debug/net8.0/WebApplication1.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/net8.0/WebApplication1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/Debug/net8.0/WebApplication1.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/ref/WebApplication1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/ref/WebApplication1.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/refint/WebApplication1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/refint/WebApplication1.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/WebApplication1.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/WebApplication1.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,14 +84,17 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Dominio/Empleado.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dominio/Equipo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Dominio/Gerente.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dominio/Pago.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dominio/Sistema.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dominio/TipoGasto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dominio/Usuario.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Controllers/LoginController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApplication1/Controllers/TipoGasto.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApplication1/Views/CrearTipoGasto.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApplication1/Views/CrearTipoGasto.cshtml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Views/Login/Autenticar.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Views/TipoGasto/CrearTipoGasto.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -226,7 +229,7 @@
       <workItem from="1759944607411" duration="1500000" />
       <workItem from="1760499500993" duration="13891000" />
       <workItem from="1762218901781" duration="624000" />
-      <workItem from="1762382999417" duration="8210000" />
+      <workItem from="1762382999417" duration="17089000" />
     </task>
     <task id="LOCAL-00001" summary="Listar usuarios Final">
       <option name="closed" value="true" />

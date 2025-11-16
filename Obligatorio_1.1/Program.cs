@@ -84,13 +84,13 @@ class Program
                         Console.Write("Equipo: ");
                         string nombreEquipo = Console.ReadLine();
 
-                        Usuario nuevoUsuario = new Usuario(nombre, apellido, contrasena, DateTime.Now);
+                        //Usuario nuevoUsuario = new Empleado(nombre, apellido, contrasena, DateTime.Now);
 
                         // Alta del usuario
-                        sistema.AltaUsuario(nuevoUsuario);
+                      //  sistema.AltaUsuario(nuevoUsuario);
 
                         // Asignación al equipo
-                        sistema.AsignarUsuarioAEquipo(nuevoUsuario, nombreEquipo);
+                       // sistema.AsignarUsuarioAEquipo(nuevoUsuario, nombreEquipo);
 
                         Console.WriteLine("Usuario agregado exitosamente.");
                     }

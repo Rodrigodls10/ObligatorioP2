@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace Dominio
 {  
-    public class Usuario
+    public abstract class Usuario
     {
         public string Nombre { get; set; }
         public string Apellido { get; set; }
@@ -19,6 +19,11 @@ namespace Dominio
             FechaIngreso = fechaIngreso;
 
             Validar(); // se valida el usuario al crear el email 
+            
+        }
+
+        public Usuario()
+        {
             
         }
 
@@ -39,6 +44,8 @@ namespace Dominio
             Usuario u = (Usuario)obj;
             return u.Email == this.Email;
         }
+
+        public abstract string Rol();
     }
 }
 
