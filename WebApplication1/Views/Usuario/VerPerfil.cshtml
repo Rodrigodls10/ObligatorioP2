@@ -1,0 +1,107 @@
+﻿@model Dominio.Usuario
+@using Dominio
+
+@{
+    ViewData["Title"] = "Mi perfil";
+    bool esGerente = Model is Gerente;
+}
+
+<div class="container mt-5" style="max-width: 800px;">
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger mb-3">
+            @ViewBag.Error
+        </div>
+    }
+
+    @if (Model != null)
+    {
+        <div class="card shadow-sm border-0 mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center" style="background-color:#0d6efd; color:white;">
+                <h4 class="mb-0">Mi perfil</h4>
+
+                @if (esGerente)
+                {
+                    <span class="badge bg-warning text-dark">Gerente</span>
+                }
+                else
+                {
+                    <span class="badge bg-info">Empleado</span>
+                }
+            </div>
+
+            <div class="card-body">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <p class="mb-1"><strong>Nombre:</strong> @Model.Nombre</p>
+                        <p class="mb-1"><strong>Apellido:</strong> @Model.Apellido</p>
+                        <p class="mb-1"><strong>Email:</strong> @Model.Email</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="mb-1">
+                            <strong>Fecha de incorporación:</strong>
+                            @Model.FechaIngreso.ToString("dd/MM/yyyy")
+                        </p>
+                        <p class="mb-1">
+                            <strong>Equipo:</strong> @ViewBag.NombreEquipo
+                        </p>
+                        <p class="mb-1">
+                            <strong>Gastado este mes:</strong>
+                            <span class="fw-bold text-success">
+                                $ @(((double)ViewBag.MontoMes).ToString("0.00"))
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @if (esGerente && ViewBag.MiembrosEquipo != null)
+        {
+            var miembros = (IEnumerable<Usuario>)ViewBag.MiembrosEquipo;
+
+            <div class="card shadow-sm border-0">
+                <div class="card-header" style="background-color:#f8f9fa;">
+                    <h5 class="mb-0">Mi equipo</h5>
+                    
+                </div>
+                <div class="card-body p-0">
+                    <table class="table table-hover mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                bool hayMiembros = false;
+                            }
+                            @foreach (var u in miembros)
+                            {
+                                hayMiembros = true;
+                                <tr>
+                                    <td>@u.Nombre</td>
+                                    <td>@u.Apellido</td>
+                                    <td>@u.Email</td>
+                                </tr>
+                            }
+
+                            @if (!hayMiembros)
+                            {
+                                <tr>
+                                    <td colspan="3" class="text-muted p-3">
+                                        Tu equipo no tiene usuarios asignados.
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
+    }
+</div>
+

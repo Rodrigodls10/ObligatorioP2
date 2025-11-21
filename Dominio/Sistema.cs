@@ -551,6 +551,131 @@ public class Sistema
         return null;
     }
 
+    // Metodo para buscar un tipo de gasto por nombre 
+    public TipoGasto BuscarTipoGastoPorNombre(string nombre)
+    {
+    if (string.IsNullOrWhiteSpace(nombre)) return null;
+
+    string buscado = nombre.ToLower();
+    foreach (TipoGasto tg in this.TiposGasto)
+    {
+        if (tg != null && tg.Nombre != null)
+        {
+            if (tg.Nombre.ToLower() == buscado)
+            {
+                return tg;
+            }
+        }
+    }
+    return null;
+    }
+
+    public void CrearPago(Pago p)
+    {
+        if (p == null)
+            throw new Exception("Pago inválido.");
+
+        if (p.Usuario == null)
+            throw new Exception("El pago debe tener un usuario asociado.");
+
+        if (p.TipoGasto == null)
+            throw new Exception("El pago debe tener un tipo de gasto.");
+
+        if (string.IsNullOrWhiteSpace(p.Descripcion))
+            throw new Exception("La descripción del pago es obligatoria.");
+
+        if (p.Monto <= 0)
+            throw new Exception("El monto debe ser mayor a cero.");
+
+        // Validaciones  de pago único
+        if (p is PagoUnico pu)
+        {
+            if (pu.fechaPago == DateTime.MinValue)
+                throw new Exception("Debe indicar la fecha de pago.");
+
+            if (string.IsNullOrWhiteSpace(pu.nroRecibo))
+                throw new Exception("El número de recibo no puede estar vacío.");
+           
+        }
+
+        // Validaciones  de pago recurrente
+        if (p is PagoRecurrente pr)
+        {
+            if (pr.fechaDesde == DateTime.MinValue)
+                throw new Exception("Debe indicar la fecha de inicio.");
+
+            // Si tiene límite, controlamos coherencia de fechas
+            if (pr.tieneLimite && pr.fechaHasta < pr.fechaDesde)
+                throw new Exception("La fecha de fin no puede ser anterior a la fecha de inicio.");
+        }
+
+        
+        this.AltaPago(p);
+    }
+
+    // Suma de montos de todos los pagos del mes para un usuario
+    public double CalcularMontoGastadoMesUsuario(string emailUsuario, int mes, int anio)
+    {
+        if (string.IsNullOrWhiteSpace(emailUsuario))
+            throw new Exception("Email inválido.");
+
+        double total = 0;
+
+        foreach (Pago p in this.Pagos)
+        {
+            if (p.Usuario == null || string.IsNullOrEmpty(p.Usuario.Email))
+                continue;
+
+            if (p.Usuario.Email.ToLower() == emailUsuario.ToLower())
+            {
+                // Polimorfismo: EsDelMes se implementa distinto en PagoUnico y PagoRecurrente
+                if (p.EsDelMes(mes, anio))
+                {
+                    total += p.Monto; // usamos el monto base como pide el enunciado
+                }
+            }
+        }
+
+        return total;
+    }
+
+    // Miembros del equipo de un usuario GERENTE ordenados por email ascendente
+    public List<Usuario> ListarMiembrosEquipoOrdenadosPorEmail(Usuario u)
+    {
+        List<Usuario> resultado = new List<Usuario>();
+
+        if (u == null) return resultado;
+
+        Equipo equipo = BuscarEquipoDeUsuario(u);
+        if (equipo == null || equipo.Usuarios == null) return resultado;
+
+        // Copiamos los usuarios
+        foreach (Usuario miembro in equipo.Usuarios)
+        {
+            if (miembro != null)
+            {
+                resultado.Add(miembro);
+            }
+        }
+
+        // Ordenamos 
+        resultado.Sort(CompararUsuariosPorEmail);
+
+        return resultado;
+    }
+
+   
+    private int CompararUsuariosPorEmail(Usuario a, Usuario b)
+    {
+        string emailA = a.Email == null ? "" : a.Email;
+        string emailB = b.Email == null ? "" : b.Email;
+
+        return String.Compare(emailA, emailB, true); 
+    }
+
+
+
+
 
 
 

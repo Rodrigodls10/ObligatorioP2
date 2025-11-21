@@ -1,0 +1,84 @@
+﻿@using Dominio
+@{
+    ViewData["Title"] = "Nuevo pago único";
+}
+
+<div class="container mt-5" style="max-width: 700px;">
+    <div class="card shadow-sm border-0">
+        <div class="card-header" style="background-color:#0d6efd; color:white;">
+            <h4 class="mb-0">Registrar pago único</h4>
+        </div>
+
+        <div class="card-body">
+
+            @if (ViewBag.Error != null)
+            {
+                <div class="alert alert-danger">
+                    @ViewBag.Error
+                </div>
+            }
+
+            <form asp-action="CrearUnico" method="post">
+
+                <div class="mb-3">
+                    <label class="form-label">Tipo de gasto</label>
+                    <select name="nombreTipoGasto" class="form-select">
+                        <option value="">Seleccione un tipo de gasto...</option>
+                        @foreach (TipoGasto tg in (IEnumerable<TipoGasto>)ViewBag.TiposGasto)
+                        {
+                            <option value="@tg.Nombre">@tg.Nombre</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Método de pago</label>
+                    <select name="metodoPago" class="form-select">
+                        @foreach (MetodoPago m in (MetodoPago[])ViewBag.MetodosPago)
+                        {
+                            <option value="@m">@m</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Descripción</label>
+                    <input type="text" name="descripcion" class="form-control" placeholder="Ej: Compra de equipo, viáticos, etc." />
+                </div>
+
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label class="form-label">Fecha de pago</label>
+                        <input type="date" name="fechaPago" class="form-control" />
+                    </div>
+
+                    <div class="mb-3 col-md-6">
+                        <label class="form-label">Número de recibo</label>
+                        <input type="text" name="nroRecibo" class="form-control" placeholder="Ej: R123" />
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Monto base</label>
+                    <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input type="number" step="0.01" name="monto" class="form-control" placeholder="0.00" />
+                    </div>
+                    <small class="text-muted">El descuento se calcula automáticamente según el método de pago.</small>
+                </div>
+
+                <div class="d-flex justify-content-between mt-4">
+                    <a asp-action="Cargar" class="btn btn-outline-secondary">
+                        Volver
+                    </a>
+                    <button type="submit" class="btn btn-primary">
+                        Guardar pago único
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+

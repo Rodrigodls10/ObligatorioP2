@@ -18,3 +18,7 @@ C:\Users\rodri\Desktop\ObligatorioP2\Dominio\obj\Debug\net8.0\Dominio.sourcelink
 C:\Users\rodri\Desktop\ObligatorioP2\Dominio\obj\Debug\net8.0\Dominio.dll
 C:\Users\rodri\Desktop\ObligatorioP2\Dominio\obj\Debug\net8.0\refint\Dominio.dll
 C:\Users\rodri\Desktop\ObligatorioP2\Dominio\obj\Debug\net8.0\Dominio.pdb
+C:\Users\rodri\Desktop\ObligatorioP2\Dominio\bin\Debug\net8.0\Dominio.deps.json
+C:\Users\rodri\Desktop\ObligatorioP2\Dominio\bin\Debug\net8.0\Dominio.dll
+C:\Users\rodri\Desktop\ObligatorioP2\Dominio\bin\Debug\net8.0\Dominio.pdb
+C:\Users\rodri\Desktop\ObligatorioP2\Dominio\obj\Debug\net8.0\ref\Dominio.dll

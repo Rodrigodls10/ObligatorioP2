@@ -1,0 +1,19 @@
+﻿<h2>Cargar pago</h2>
+
+@if (TempData["Mensaje"] != null)
+{
+    <div style="color:green">@TempData["Mensaje"]</div>
+}
+
+<p>Elegí qué tipo de pago querés cargar:</p>
+
+<div>
+    <a asp-controller="Pago" asp-action="CrearUnico">
+        <button type="button">Cargar pago único</button>
+    </a>
+
+    <a asp-controller="Pago" asp-action="CrearRecurrente" style="margin-left:10px;">
+        <button type="button">Cargar pago recurrente</button>
+    </a>
+</div>
+

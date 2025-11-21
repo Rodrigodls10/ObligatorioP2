@@ -15,83 +15,112 @@
     <link rel="stylesheet" href="~/WebApplication1.styles.css" asp-append-version="true" />
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom shadow-sm">
-        <div class="container-fluid">
-            <!-- Marca / Título del sistema -->
-            <a class="navbar-brand fw-bold text-primary" asp-area="" asp-controller="Home" asp-action="Index">
-                Sistema de Gestión de Pagos
-            </a>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom shadow-sm">
+            <div class="container-fluid">
+                <!-- Marca / Título del sistema -->
+                <a class="navbar-brand fw-bold text-primary" asp-area="" asp-controller="Home" asp-action="Index">
+                    Sistema de Gestión de Pagos
+                </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Alternar navegación">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                        aria-controls="mainNavbar" aria-expanded="false" aria-label="Alternar navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="mainNavbar">
-                <!-- Menú bonito flor -->
-                <ul class="navbar-nav me-auto mb-2 mb-sm-0">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">
-                            Inicio
-                        </a>
-                    </li>
-
-                    @* Solo el gerente ve esta opción *@
-                    @if (rol == "Gerente")
-                    {
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <!-- Menú -->
+                    <ul class="navbar-nav me-auto mb-2 mb-sm-0">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="TipoGasto" asp-action="CrearTipoGasto">
-                                Tipos de gasto
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">
+                                Inicio
                             </a>
                         </li>
-                    }
 
-                    @* agregar: Mis pagos, Perfil, etc. *@
-                </ul>
+                        @* Solo el gerente ve esta opción *@
+                        @if (rol == "Gerente")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="TipoGasto" asp-action="CrearTipoGasto">
+                                    Tipos de gasto
+                                </a>
+                            </li>
+                        }
 
-                <!-- Zona derecha: login / saludo -->
-                <div class="d-flex align-items-center">
-                    @if (string.IsNullOrEmpty(nombre))
-                    {
-                        <a class="btn btn-outline-primary" asp-controller="Login" asp-action="Autenticar">
-                            Iniciar sesión
-                        </a>
-                    }
-                    else
-                    {
-                        <span class="me-3 text-muted small">
-                            Hola, <strong>@nombre</strong>
-                            @if (!string.IsNullOrEmpty(rol))
-                            {
-                                @($" ({rol})")
-                            }
-                        </span>
-                        <a class="btn btn-outline-danger btn-sm" asp-controller="Login" asp-action="Logout">
-                            Cerrar sesión
-                        </a>
-                    }
+                        @* Mis pagos: solo si hay usuario logueado *@
+                        @if (!string.IsNullOrEmpty(nombre))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Pago" asp-action="MisPagos">
+                                    Mis pagos
+                                </a>
+                            </li>
+                        }
+                        @if (!string.IsNullOrEmpty(nombre))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Pago" asp-action="Cargar">
+                                    Cargar pago
+                                </a>
+                            </li>
+
+                        }
+                        @if (!string.IsNullOrEmpty(nombre))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="VerPerfil">
+                                    Ver Perfil
+                                </a>
+                            </li>
+
+                        }
+
+
+
+                    </ul>
+
+                    <!-- Zona derecha: login / saludo -->
+                    <div class="d-flex align-items-center">
+                        @if (string.IsNullOrEmpty(nombre))
+                        {
+                            <a class="btn btn-outline-primary" asp-controller="Login" asp-action="Autenticar">
+                                Iniciar sesión
+                            </a>
+                        }
+                        else
+                        {
+                            <span class="me-3 text-muted small">
+                                Hola, <strong>@nombre</strong>
+                                @if (!string.IsNullOrEmpty(rol))
+                                {
+                                    @($" ({rol})")
+                                }
+                            </span>
+                            <a class="btn btn-outline-danger btn-sm" asp-controller="Login" asp-action="Logout">
+                                Cerrar sesión
+                            </a>
+                        }
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
 
-<div class="container mt-4">
-    <main class="pb-3">
-        @RenderBody()
-    </main>
-</div>
-
-<footer class="border-top footer text-muted mt-4">
-    <div class="container py-2 text-center">
-        &copy; 2025 - Sistema de Gestión de Pagos
+    <div class="container mt-4">
+        <main class="pb-3">
+            @RenderBody()
+        </main>
     </div>
-</footer>
 
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="~/js/site.js" asp-append-version="true"></script>
-@await RenderSectionAsync("Scripts", required: false)
+    <footer class="border-top footer text-muted mt-4">
+        <div class="container py-2 text-center">
+            &copy; 2025 - Sistema de Gestión de Pagos
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

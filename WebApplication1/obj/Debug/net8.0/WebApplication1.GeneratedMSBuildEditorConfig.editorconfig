@@ -1,14 +1,22 @@
 is_global = true
 build_property.TargetFramework = net8.0
-build_property.TargetFrameworkIdentifier = .NETCoreApp
-build_property.TargetFrameworkVersion = v8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v8.0
 build_property.RootNamespace = WebApplication1
 build_property.RootNamespace = WebApplication1
 build_property.ProjectDir = C:\Users\rodri\Desktop\ObligatorioP2\WebApplication1\
@@ -38,8 +46,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQXV0ZW50aWNhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rodri/Desktop/ObligatorioP2/WebApplication1/Views/Pago/Class1.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb1xDbGFzczEuY3NodG1s
+[C:/Users/rodri/Desktop/ObligatorioP2/WebApplication1/Views/Pago/Cargar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb1xDYXJnYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rodri/Desktop/ObligatorioP2/WebApplication1/Views/Pago/CrearRecurrente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb1xDcmVhclJlY3VycmVudGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rodri/Desktop/ObligatorioP2/WebApplication1/Views/Pago/CrearUnico.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb1xDcmVhclVuaWNvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rodri/Desktop/ObligatorioP2/WebApplication1/Views/Pago/MisPagos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb1xNaXNQYWdvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/rodri/Desktop/ObligatorioP2/WebApplication1/Views/Shared/Error.cshtml]
@@ -52,6 +72,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/rodri/Desktop/ObligatorioP2/WebApplication1/Views/TipoGasto/CrearTipoGasto.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb0dhc3RvXENyZWFyVGlwb0dhc3RvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rodri/Desktop/ObligatorioP2/WebApplication1/Views/Usuario/VerPerfil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xWZXJQZXJmaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/rodri/Desktop/ObligatorioP2/WebApplication1/Views/_ViewImports.cshtml]

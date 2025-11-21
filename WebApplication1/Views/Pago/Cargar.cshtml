@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Cargar pago";
+}
+
+<div class="container mt-5" style="max-width: 800px;">
+    <div class="text-center mb-4">
+        <h2 class="fw-bold" style="color: #0d6efd;">Cargar pago</h2>
+        <p class="text-muted">
+            Elegí el tipo de pago que querés registrar.
+        </p>
+    </div>
+
+    @if (TempData["Mensaje"] != null)
+    {
+        <div class="alert alert-success text-center shadow-sm">
+            @TempData["Mensaje"]
+        </div>
+    }
+
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card shadow-sm h-100 border-0">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold" style="color:#0d6efd;">Pago único</h5>
+                    <p class="card-text text-muted">
+                        Un pago puntual con posible descuento según el método (efectivo, débito o crédito).
+                    </p>
+                    <div class="mt-auto">
+                        <a asp-controller="Pago" asp-action="CrearUnico" class="btn btn-primary w-100">
+                            Cargar pago único
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card shadow-sm h-100 border-0">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold" style="color:#0d6efd;">Pago recurrente</h5>
+                    <p class="card-text text-muted">
+                        Una suscripción mensual con recargos según la duración y si tiene límite.
+                    </p>
+                    <div class="mt-auto">
+                        <a asp-controller="Pago" asp-action="CrearRecurrente" class="btn btn-outline-primary w-100">
+                            Cargar pago recurrente
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
