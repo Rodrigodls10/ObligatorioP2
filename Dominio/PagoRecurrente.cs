@@ -104,6 +104,22 @@ namespace Dominio
             }
         }
 
+
+        // fecha desde sea el mes actual
+        public override bool EsDelMes(int mes, int anio)
+        {
+            return fechaDesde.Month == mes && fechaDesde.Year == anio;
+        }
+
+        // "en caso de pagos recurrentes debe utilizar el valor de la cuota mensual no el total"
+        public override double MontoParaOrdenar()
+        {
+            return Monto; // cuota mensual
+        }
+
+
+
+
         public override string ToString()
         {
             return $"Pago Recurrente - Id: {Id}, Usuario - {Usuario.Email}, Tipo Gasto - {TipoGasto.Nombre}, Metodo {Metodo}, Descripcion {Descripcion}, Desde {fechaDesde.ToString("dd/MM/yyyy")}, Total - {CalcularTotal().ToString("0.00")}";

@@ -10,3 +10,11 @@
 /Users/rodrigodelossantos/Desktop/RiderProjects/Obligatorio_1.1/Dominio/obj/Debug/net8.0/refint/Dominio.dll
 /Users/rodrigodelossantos/Desktop/RiderProjects/Obligatorio_1.1/Dominio/obj/Debug/net8.0/Dominio.pdb
 /Users/rodrigodelossantos/Desktop/RiderProjects/Obligatorio_1.1/Dominio/obj/Debug/net8.0/ref/Dominio.dll
+C:\Users\rodri\Desktop\ObligatorioP2\Dominio\obj\Debug\net8.0\Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rodri\Desktop\ObligatorioP2\Dominio\obj\Debug\net8.0\Dominio.AssemblyInfoInputs.cache
+C:\Users\rodri\Desktop\ObligatorioP2\Dominio\obj\Debug\net8.0\Dominio.AssemblyInfo.cs
+C:\Users\rodri\Desktop\ObligatorioP2\Dominio\obj\Debug\net8.0\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\rodri\Desktop\ObligatorioP2\Dominio\obj\Debug\net8.0\Dominio.sourcelink.json
+C:\Users\rodri\Desktop\ObligatorioP2\Dominio\obj\Debug\net8.0\Dominio.dll
+C:\Users\rodri\Desktop\ObligatorioP2\Dominio\obj\Debug\net8.0\refint\Dominio.dll
+C:\Users\rodri\Desktop\ObligatorioP2\Dominio\obj\Debug\net8.0\Dominio.pdb

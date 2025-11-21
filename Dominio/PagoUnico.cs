@@ -36,9 +36,14 @@ namespace Dominio
             return total;
         }
 
-       
+        // Metodo para ver si el pago corresponde al mes y año indicados 
+        public override bool EsDelMes(int mes, int anio)
+        {
+            return fechaPago.Month == mes && fechaPago.Year == anio;
+        }
 
-     
+
+
 
         public override string ToString()
         {

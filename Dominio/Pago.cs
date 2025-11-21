@@ -44,7 +44,18 @@ public abstract class Pago
   
 
     public abstract double CalcularTotal();
-    
-    
-    
+
+    public abstract double CalcularTotal();
+
+ 
+    public abstract bool EsDelMes(int mes, int anio);
+
+    // Por defecto usamos el total (pago único)
+    public virtual double MontoParaOrdenar()
+    {
+        return CalcularTotal();
+    }
+
+
+
 }

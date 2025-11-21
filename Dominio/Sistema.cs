@@ -460,5 +460,101 @@ public class Sistema
 
         return elU;
     }
+
+    public List<Pago> ListarPagosUsuarioMes(string emailUsuario, int mes, int anio)
+    {
+        if (string.IsNullOrWhiteSpace(emailUsuario))
+            throw new Exception("Email inválido.");
+
+        List<Pago> resultado = new List<Pago>();
+
+        foreach (Pago p in this.Pagos)
+        {
+            if (p.Usuario == null || string.IsNullOrEmpty(p.Usuario.Email))
+                continue;
+
+            // filtro por usuario
+            if (p.Usuario.Email.ToLower() == emailUsuario.ToLower())
+            {     
+                // Metodo polimorfico de Pagos 
+                if (p.EsDelMes(mes, anio))
+                {
+                    resultado.Add(p);
+                }
+            }
+        }
+        resultado.Sort(CompararPagosPorMonto);
+
+        return resultado;
+
+    }
+
+    private int CompararPagosPorMonto(Pago a, Pago b)
+    {
+        double montoA = a.MontoParaOrdenar();
+        double montoB = b.MontoParaOrdenar();
+
+        
+        if (montoA > montoB) return -1;
+        if (montoA < montoB) return 1;
+        return 0;
+    }
     
+
+    //Armamos un metodo para buscar el usuario por el email para no tener en la variable de sesion el password, que el profe dijo en clase que no es recomendable en casos de vulnerabilidades en nuestro sistema 
+    public Usuario BuscarUsuarioPorEmail(string email)
+    {
+        if (email == null || email == "")
+        {
+            return null;
+        }
+
+        string emailLower = email.ToLower();
+
+        foreach (Usuario u in this.Usuarios)
+        {
+            if (u != null && u.Email != null)
+            {
+                if (u.Email.ToLower() == emailLower)
+                {
+                    return u;
+                }
+            }
+        }
+
+        return null; // no encontrado
+    }
+
+
+    // Por las dudas armo un metodo para tambien buscar el equipo de un usuario
+    public Equipo BuscarEquipoDeUsuario(Usuario usuario)
+    {
+        if (usuario == null) return null;
+
+        foreach (Equipo e in this.Equipos)
+        {
+            if (e != null && e.Usuarios != null)
+            {
+                foreach (Usuario u in e.Usuarios)
+                {
+                    if (u != null && u.Email != null && usuario.Email != null)
+                    {
+                        if (u.Email.ToLower() == usuario.Email.ToLower())
+                        {
+                            return e;
+                        }
+                    }
+                }
+            }
+        }
+
+        return null;
+    }
+
+
+
+
+
+
+
 }
