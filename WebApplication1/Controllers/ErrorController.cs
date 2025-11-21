@@ -5,7 +5,7 @@ namespace WebApplication1.Controllers;
 public class ErrorController : Controller
 {
     // GET
-    public IActionResult Index()
+    public IActionResult NoPermitido()
     {
         return View();
     }

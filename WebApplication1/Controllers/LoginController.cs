@@ -25,8 +25,8 @@ public class LoginController : Controller
 
             Usuario elU = Sistema.ObtenerInstancia().AutenticarUsuario(email, password);
 
-            HttpContext.Session.SetString("email", elU.Email ?? "");
-            HttpContext.Session.SetString("nombre", elU.Nombre ?? "");
+            HttpContext.Session.SetString("email", elU.Email);
+            HttpContext.Session.SetString("nombre", elU.Nombre);
             HttpContext.Session.SetString("rol", elU.Rol());
 
             // después deciden adónde redirigir (según rol, por ejemplo)

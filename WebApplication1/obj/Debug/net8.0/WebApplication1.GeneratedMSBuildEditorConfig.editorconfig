@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/rodrigodelossantos/Desktop/RiderProjects/Obligatorio_1.1/WebApplication1
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/rodrigodelossantos/Desktop/RiderProjects/Obligatorio_1.1/WebApplication1/Views/Error/NoPermitido.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXJyb3IvTm9QZXJtaXRpZG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/rodrigodelossantos/Desktop/RiderProjects/Obligatorio_1.1/WebApplication1/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

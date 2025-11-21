@@ -2,39 +2,69 @@
     ViewData["Title"] = "Cargar nuevo tipo de gasto";
 }
 
-<h2>Cargar nuevo tipo de gasto</h2>
+<div class="container mt-5" style="max-width: 700px;">
 
-@if (ViewBag.Mensaje != null)
-{
-    <p style="color: green">@ViewBag.Mensaje</p>
-}
+    <div class="card shadow-sm">
+        <div class="card-header text-white" style="background-color: #0d6efd;">
+            <h3 class="mb-0">Cargar nuevo tipo de gasto</h3>
+        </div>
 
-<form method="post" action="/TipoGasto/CrearTipoGasto">
-    <label>Nombre:</label>
-    <input type="text" name="nombre" /> <br />
+        <div class="card-body">
 
-    <label>Descripción:</label>
-    <input type="text" name="descripcion" /> <br />
+            @if (ViewBag.Mensaje != null)
+            {
+                <div class="alert alert-success">
+                    @ViewBag.Mensaje
+                </div>
+            }
 
-    <button type="submit">Guardar</button>
-</form>
+            <form method="post" action="/TipoGasto/CrearTipoGasto">
 
-<hr />
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Nombre</label>
+                    <input type="text" name="nombre" class="form-control" placeholder="Ej: Transporte" required />
+                </div>
 
-<h3>Tipos de gasto existentes</h3>
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Descripción</label>
+                    <input type="text" name="descripcion" class="form-control" placeholder="Ej: Traslados internos" required />
+                </div>
 
-@if (ViewBag.Tipos != null && ViewBag.Tipos.Count > 0)
-{
-    <ul>
-        @foreach (var t in ViewBag.Tipos)
-        {
-            <li><b>@t.Nombre</b> - @t.Descripcion</li>
-        }
-    </ul>
-}
-else
-{
-    <p>No hay tipos de gasto cargados.</p>
-}
+                <button type="submit" class="btn text-white w-100"
+                        style="background-color: #0d6efd;">
+                    Guardar
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-light">
+            <h4 class="mb-0">Tipos de gasto existentes</h4>
+        </div>
+
+        <div class="card-body">
+
+            @if (ViewBag.Tipos != null && ViewBag.Tipos.Count > 0)
+            {
+                <ul class="list-group">
+                    @foreach (var t in ViewBag.Tipos)
+                    {
+                        <li class="list-group-item">
+                            <b>@t.Nombre</b> — @t.Descripcion
+                        </li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p class="text-muted">No hay tipos de gasto cargados.</p>
+            }
+
+        </div>
+    </div>
+
+</div>
 
 

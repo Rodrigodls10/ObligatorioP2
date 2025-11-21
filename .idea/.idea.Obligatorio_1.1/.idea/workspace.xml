@@ -12,47 +12,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a022c7f4-0a20-4110-bd20-a238dba0858e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Dominio/Empleado.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dominio/Gerente.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApplication1/Controllers/LoginController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApplication1/Views/Login/Autenticar.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Obligatorio_1.1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Obligatorio_1.1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dominio/Sistema.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/Sistema.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dominio/Usuario.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/Usuario.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dominio/bin/Debug/net8.0/Dominio.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/bin/Debug/net8.0/Dominio.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dominio/bin/Debug/net8.0/Dominio.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/bin/Debug/net8.0/Dominio.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/Dominio.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/Dominio.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/Dominio.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/Dominio.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/Dominio.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/Dominio.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/Dominio.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/Dominio.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/Dominio.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/Dominio.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/Dominio.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/Dominio.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/ref/Dominio.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/ref/Dominio.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/refint/Dominio.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/obj/Debug/net8.0/refint/Dominio.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Obligatorio_1.1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Obligatorio_1.1/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Obligatorio_1.1/bin/Debug/net8.0/Dominio.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Obligatorio_1.1/bin/Debug/net8.0/Dominio.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Obligatorio_1.1/bin/Debug/net8.0/Dominio.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Obligatorio_1.1/bin/Debug/net8.0/Dominio.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Obligatorio_1.1/bin/Debug/net8.0/Obligatorio_1.1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Obligatorio_1.1/bin/Debug/net8.0/Obligatorio_1.1.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Obligatorio_1.1/bin/Debug/net8.0/Obligatorio_1.1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Obligatorio_1.1/bin/Debug/net8.0/Obligatorio_1.1.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/Obligatorio_1.1.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/Obligatorio_1.1.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/Obligatorio_1.1.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/Obligatorio_1.1.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/Obligatorio_1.1.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/Obligatorio_1.1.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/Obligatorio_1.1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/Obligatorio_1.1.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/Obligatorio_1.1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/Obligatorio_1.1.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/Obligatorio_1.1.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/Obligatorio_1.1.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/ref/Obligatorio_1.1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/ref/Obligatorio_1.1.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/refint/Obligatorio_1.1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Obligatorio_1.1/obj/Debug/net8.0/refint/Obligatorio_1.1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/Controllers/ErrorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Controllers/ErrorController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/Controllers/LoginController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Controllers/LoginController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/net8.0/Dominio.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/Debug/net8.0/Dominio.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/net8.0/Dominio.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/Debug/net8.0/Dominio.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/net8.0/Obligatorio_1.1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/Debug/net8.0/Obligatorio_1.1.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/net8.0/Obligatorio_1.1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/Debug/net8.0/Obligatorio_1.1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/Views/Error/NoPermitido.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Views/Error/NoPermitido.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/Views/Login/Autenticar.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Views/Login/Autenticar.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/Views/TipoGasto/CrearTipoGasto.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Views/TipoGasto/CrearTipoGasto.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/net8.0/WebApplication1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/Debug/net8.0/WebApplication1.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/net8.0/WebApplication1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/Debug/net8.0/WebApplication1.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/net8.0/WebApplication1.pdb" afterDir="false" />
@@ -91,8 +64,10 @@
     <setting file="file://$PROJECT_DIR$/Dominio/Sistema.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dominio/TipoGasto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dominio/Usuario.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Controllers/ErrorController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApplication1/Controllers/LoginController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApplication1/Controllers/TipoGasto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Views/Error/NoPermitido.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApplication1/Views/Login/Autenticar.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApplication1/Views/TipoGasto/CrearTipoGasto.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
   </component>
@@ -229,7 +204,7 @@
       <workItem from="1759944607411" duration="1500000" />
       <workItem from="1760499500993" duration="13891000" />
       <workItem from="1762218901781" duration="624000" />
-      <workItem from="1762382999417" duration="17089000" />
+      <workItem from="1762382999417" duration="35934000" />
     </task>
     <task id="LOCAL-00001" summary="Listar usuarios Final">
       <option name="closed" value="true" />
