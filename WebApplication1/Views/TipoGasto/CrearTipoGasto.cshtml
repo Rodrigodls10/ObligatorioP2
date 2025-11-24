@@ -11,12 +11,20 @@
 
         <div class="card-body">
 
-            @if (ViewBag.Mensaje != null)
+            @if (TempData["Error"] != null)
             {
-                <div class="alert alert-success">
-                    @ViewBag.Mensaje
+                <div class="alert alert-danger">
+                    @TempData["Error"]
                 </div>
             }
+
+            @if (TempData["Mensaje"] != null)
+            {
+                <div class="alert alert-success">
+                    @TempData["Mensaje"]
+                </div>
+            }
+
 
             <form method="post" action="/TipoGasto/CrearTipoGasto">
 
@@ -51,10 +59,20 @@
                 <ul class="list-group">
                     @foreach (var t in ViewBag.Tipos)
                     {
-                        <li class="list-group-item">
-                            <b>@t.Nombre</b> — @t.Descripcion
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>
+                                <b>@t.Nombre</b> — @t.Descripcion
+                            </span>
+
+                            <form method="post" action="/TipoGasto/EliminarTipoGasto">
+                                <input type="hidden" name="nombreTipoGasto" value="@t.Nombre" />
+                                <button type="submit" class="btn btn-sm btn-danger">
+                                    Eliminar
+                                </button>
+                            </form>
                         </li>
                     }
+
                 </ul>
             }
             else
@@ -64,7 +82,4 @@
 
         </div>
     </div>
-
 </div>
-
-

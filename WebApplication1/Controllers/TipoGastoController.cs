@@ -28,17 +28,32 @@ public class TipoGastoController : Controller
 
 
             sistema.AltaTipoGasto(tg);
-            ViewBag.Tipos = sistema.TiposGasto;
-            ViewBag.Mensaje = "Tipo de gasto creado correctamente.";
+            TempData["Mensaje"] = "Tipo de gasto creado correctamente.";
 
-            return View();
+
         }
         catch (Exception ex)
         {
-            TempData["Mensaje"] = ex.Message;
-            return RedirectToAction("Index", "Home");
+            TempData["Error"] = ex.Message;
         }
-       
+       return RedirectToAction("CrearTipoGasto");
 
+    }
+    //Eliminar tipo de Gasto
+
+    [HttpPost]
+    public IActionResult EliminarTipoGasto(string nombreTipoGasto)
+    {
+        string mensaje = sistema.EliminarTipoDeGasto(nombreTipoGasto);
+
+        if(mensaje != null)
+        {
+            TempData["Error"] = mensaje;
+
+        }
+        else { 
+            TempData["Mensaje"] = "El tipo de gasto fue eliminado correctamente"; 
+        }
+        return RedirectToAction("CrearTipoGasto");
     }
 }

@@ -102,7 +102,7 @@ public class Sistema
         // ====== GASTOS ======
         TipoGasto t1 = new TipoGasto(); t1.Nombre = "Servicios"; t1.Descripcion = "Gastos de luz, agua, internet";
         TipoGasto t2 = new TipoGasto(); t2.Nombre = "Transporte"; t2.Descripcion = "Viaticos y traslados";
-        TipoGasto t3 = new TipoGasto(); t3.Nombre = "Viaticos"; t3.Descripcion = "Comidas o estad�as laborales";
+        TipoGasto t3 = new TipoGasto(); t3.Nombre = "Viaticos"; t3.Descripcion = "Comidas o estadias laborales";
         TipoGasto t4 = new TipoGasto(); t4.Nombre = "Suministros"; t4.Descripcion = "Material de oficina";
         TipoGasto t5 = new TipoGasto(); t5.Nombre = "Software"; t5.Descripcion = "Licencias y suscripciones";
         TipoGasto t6 = new TipoGasto(); t6.Nombre = "Hardware"; t6.Descripcion = "Equipos o componentes";
@@ -132,7 +132,7 @@ public class Sistema
         PagoUnico p7 = new PagoUnico(MetodoPago.CREDITO, t7, u7, "Pago unico 7", hoy.AddDays(-9), "R007", 2100);
         PagoUnico p8 = new PagoUnico(MetodoPago.DEBITO, t8, u8, "Pago unico 8", hoy.AddDays(-10), "R008", 2200);
         PagoUnico p9 = new PagoUnico(MetodoPago.EFECTIVO, t9, u9, "Pago unico 9", hoy.AddDays(-11), "R009", 2300);
-        PagoUnico p10 = new PagoUnico(MetodoPago.DEBITO, t10, u10, "Pago unico 10", hoy.AddDays(-12), "R010", 2400);
+        PagoUnico p10 = new PagoUnico(MetodoPago.DEBITO, t1, u10, "Pago unico 10", hoy.AddDays(-12), "R010", 2400);
         PagoUnico p11 = new PagoUnico(MetodoPago.CREDITO, t1, u11, "Pago unico 11", hoy.AddDays(-13), "R011", 2500);
         PagoUnico p12 = new PagoUnico(MetodoPago.EFECTIVO, t2, u12, "Pago unico 12", hoy.AddDays(-14), "R012", 2600);
         PagoUnico p13 = new PagoUnico(MetodoPago.EFECTIVO, t3, u13, "Pago unico 13", hoy.AddDays(-15), "R013", 2700);
@@ -166,7 +166,7 @@ public class Sistema
         PagoRecurrente r12 = new PagoRecurrente(MetodoPago.DEBITO, t7, u12, "Suscripcion activa con fin 7", hoy.AddMonths(-3), hoy.AddMonths(13), true, 1900);
         PagoRecurrente r13 = new PagoRecurrente(MetodoPago.EFECTIVO, t8, u13, "Suscripcion activa con fin 8", hoy.AddMonths(-2), hoy.AddMonths(14), true, 2000);
         PagoRecurrente r14 = new PagoRecurrente(MetodoPago.DEBITO, t9, u14, "Suscripcion activa con fin 9", hoy.AddMonths(-1), hoy.AddMonths(15), true, 2100);
-        PagoRecurrente r15 = new PagoRecurrente(MetodoPago.CREDITO, t10, u15, "Suscripcion activa con fin 10", hoy.AddMonths(-1), hoy.AddMonths(16), true, 2200);
+        PagoRecurrente r15 = new PagoRecurrente(MetodoPago.CREDITO, t1, u15, "Suscripcion activa con fin 10", hoy.AddMonths(-1), hoy.AddMonths(16), true, 2200);
 
         // 10 SIN LIMITE (usamos una fecha lejana como fin pero con hasEnd=false)
         PagoRecurrente r16 = new PagoRecurrente(MetodoPago.EFECTIVO, t1, u16, "Suscripcion sin fin 1", hoy.AddMonths(-3), hoy.AddYears(5), false, 1800);
@@ -178,7 +178,7 @@ public class Sistema
         PagoRecurrente r22 = new PagoRecurrente(MetodoPago.DEBITO, t7, u22, "Suscripcion sin fin 7", hoy.AddMonths(-1), hoy.AddYears(5), false, 2400);
         PagoRecurrente r23 = new PagoRecurrente(MetodoPago.CREDITO, t8, u1, "Suscripcion sin fin 8", hoy.AddMonths(-1), hoy.AddYears(5), false, 2500);
         PagoRecurrente r24 = new PagoRecurrente(MetodoPago.DEBITO, t9, u2, "Suscripcion sin fin 9", hoy.AddMonths(-1), hoy.AddYears(5), false, 2600);
-        PagoRecurrente r25 = new PagoRecurrente(MetodoPago.EFECTIVO, t10, u3, "Suscripcion sin fin 10", hoy.AddMonths(-1), hoy.AddYears(5), false, 2700);
+        PagoRecurrente r25 = new PagoRecurrente(MetodoPago.EFECTIVO, t1, u3, "Suscripcion sin fin 10", hoy.AddMonths(-1), hoy.AddYears(5), false, 2700);
 
         // Agregar pagos recurrentes a la lista
         this.AltaPago(r1); this.AltaPago(r2); this.AltaPago(r3); this.AltaPago(r4); this.AltaPago(r5);
@@ -674,12 +674,53 @@ public class Sistema
     }
 
 
+    public string EliminarTipoDeGasto(string nombreTipoGasto)
+    {
+        if (nombreTipoGasto == null || nombreTipoGasto == "")
+        {
+            return "El nombre del tipo de gasto no puede ser vacio";
+        }
 
+        string buscarTipo = nombreTipoGasto.ToLower();
 
+        TipoGasto tipoGastoEliminado = null;
 
+        foreach (TipoGasto tg in this.TiposGasto)
+        {
+            if (tg != null && tg.Nombre != null)
+            {
+                if (tg.Nombre.ToLower() == buscarTipo)
+                {
+                    tipoGastoEliminado = tg;
+                }
+            }
+        }
+        if (tipoGastoEliminado == null)
+        {
+            return "No existe el tipo de gasto.";
 
+        }
+        //ver si el tipo de gasto se usa en algun pago
+        bool estaEnUso = false;
 
+        foreach (Pago p in this.Pagos)
+        {
+            if (p != null && p.TipoGasto != null && p.TipoGasto.Nombre != null)
+            {
+                if (p.TipoGasto.Nombre.ToLower() == buscarTipo)
+                {
+                    estaEnUso = true;
+                }
+            }
+        }
 
+        if (estaEnUso)
+        {
+            return "No se pude eliminar el tipo de gasto porque está siendo utilizado en un pago";
+        }
 
+        this.TiposGasto.Remove(tipoGastoEliminado);
 
+        return null;
+    }
 }
