@@ -397,11 +397,7 @@ public class Sistema
     }
     public void AltaTipoGasto(TipoGasto tg)
     {
-        if (tg == null)
-        {
-            throw new Exception("Tipo de gasto inválido");
-        }
-
+        
         if (string.IsNullOrWhiteSpace(tg.Nombre))
         {
             throw new Exception("El nombre es obligatorio");
@@ -575,39 +571,10 @@ public class Sistema
         if (p == null)
             throw new Exception("Pago inválido.");
 
-        if (p.Usuario == null)
-            throw new Exception("El pago debe tener un usuario asociado.");
+        // Metodo polimorfico para que cada clase se valide a si misma 
+        p.Validar();
 
-        if (p.TipoGasto == null)
-            throw new Exception("El pago debe tener un tipo de gasto.");
-
-        if (string.IsNullOrWhiteSpace(p.Descripcion))
-            throw new Exception("La descripción del pago es obligatoria.");
-
-        if (p.Monto <= 0)
-            throw new Exception("El monto debe ser mayor a cero.");
-
-        // Validaciones  de pago único
-        if (p is PagoUnico pu)
-        {
-            if (pu.fechaPago == DateTime.MinValue)
-                throw new Exception("Debe indicar la fecha de pago.");
-
-            if (string.IsNullOrWhiteSpace(pu.nroRecibo))
-                throw new Exception("El número de recibo no puede estar vacío.");
-           
-        }
-
-        // Validaciones  de pago recurrente
-        if (p is PagoRecurrente pr)
-        {
-            if (pr.fechaDesde == DateTime.MinValue)
-                throw new Exception("Debe indicar la fecha de inicio.");
-
-            // Si tiene límite, controlamos coherencia de fechas
-            if (pr.tieneLimite && pr.fechaHasta < pr.fechaDesde)
-                throw new Exception("La fecha de fin no puede ser anterior a la fecha de inicio.");
-        }
+        
 
         
         this.AltaPago(p);

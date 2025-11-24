@@ -17,73 +17,71 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebApplication1
 build_property.RootNamespace = WebApplication1
-build_property.ProjectDir = C:\Users\flore\Source\Repos\ObligatorioP2-2\WebApplication1\
+build_property.ProjectDir = /Users/rodrigodelossantos/Desktop/RiderProjects/Obligatorio_1.1/WebApplication1/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\flore\Source\Repos\ObligatorioP2-2\WebApplication1
+build_property.MSBuildProjectDirectory = /Users/rodrigodelossantos/Desktop/RiderProjects/Obligatorio_1.1/WebApplication1
 build_property._RazorSourceGeneratorDebug = 
-build_property.EffectiveAnalysisLevelStyle = 8.0
-build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/flore/Source/Repos/ObligatorioP2-2/WebApplication1/Views/Error/NoPermitido.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcTm9QZXJtaXRpZG8uY3NodG1s
+[/Users/rodrigodelossantos/Desktop/RiderProjects/Obligatorio_1.1/WebApplication1/Views/Error/NoPermitido.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXJyb3IvTm9QZXJtaXRpZG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/flore/Source/Repos/ObligatorioP2-2/WebApplication1/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[/Users/rodrigodelossantos/Desktop/RiderProjects/Obligatorio_1.1/WebApplication1/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/flore/Source/Repos/ObligatorioP2-2/WebApplication1/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[/Users/rodrigodelossantos/Desktop/RiderProjects/Obligatorio_1.1/WebApplication1/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/flore/Source/Repos/ObligatorioP2-2/WebApplication1/Views/Login/Autenticar.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQXV0ZW50aWNhci5jc2h0bWw=
+[/Users/rodrigodelossantos/Desktop/RiderProjects/Obligatorio_1.1/WebApplication1/Views/Login/Autenticar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9naW4vQXV0ZW50aWNhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/flore/Source/Repos/ObligatorioP2-2/WebApplication1/Views/Pago/Cargar.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb1xDYXJnYXIuY3NodG1s
+[/Users/rodrigodelossantos/Desktop/RiderProjects/Obligatorio_1.1/WebApplication1/Views/Pago/Cargar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnby9DYXJnYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/flore/Source/Repos/ObligatorioP2-2/WebApplication1/Views/Pago/CrearRecurrente.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb1xDcmVhclJlY3VycmVudGUuY3NodG1s
+[/Users/rodrigodelossantos/Desktop/RiderProjects/Obligatorio_1.1/WebApplication1/Views/Pago/CrearRecurrente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnby9DcmVhclJlY3VycmVudGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/flore/Source/Repos/ObligatorioP2-2/WebApplication1/Views/Pago/CrearUnico.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb1xDcmVhclVuaWNvLmNzaHRtbA==
+[/Users/rodrigodelossantos/Desktop/RiderProjects/Obligatorio_1.1/WebApplication1/Views/Pago/CrearUnico.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnby9DcmVhclVuaWNvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/flore/Source/Repos/ObligatorioP2-2/WebApplication1/Views/Pago/MisPagos.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb1xNaXNQYWdvcy5jc2h0bWw=
+[/Users/rodrigodelossantos/Desktop/RiderProjects/Obligatorio_1.1/WebApplication1/Views/Pago/MisPagos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnby9NaXNQYWdvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/flore/Source/Repos/ObligatorioP2-2/WebApplication1/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+[/Users/rodrigodelossantos/Desktop/RiderProjects/Obligatorio_1.1/WebApplication1/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/flore/Source/Repos/ObligatorioP2-2/WebApplication1/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[/Users/rodrigodelossantos/Desktop/RiderProjects/Obligatorio_1.1/WebApplication1/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/flore/Source/Repos/ObligatorioP2-2/WebApplication1/Views/TipoGasto/CrearTipoGasto.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb0dhc3RvXENyZWFyVGlwb0dhc3RvLmNzaHRtbA==
+[/Users/rodrigodelossantos/Desktop/RiderProjects/Obligatorio_1.1/WebApplication1/Views/TipoGasto/CrearTipoGasto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGlwb0dhc3RvL0NyZWFyVGlwb0dhc3RvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/flore/Source/Repos/ObligatorioP2-2/WebApplication1/Views/Usuario/VerPerfil.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xWZXJQZXJmaWwuY3NodG1s
+[/Users/rodrigodelossantos/Desktop/RiderProjects/Obligatorio_1.1/WebApplication1/Views/Usuario/VerPerfil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXN1YXJpby9WZXJQZXJmaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/flore/Source/Repos/ObligatorioP2-2/WebApplication1/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[/Users/rodrigodelossantos/Desktop/RiderProjects/Obligatorio_1.1/WebApplication1/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/flore/Source/Repos/ObligatorioP2-2/WebApplication1/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+[/Users/rodrigodelossantos/Desktop/RiderProjects/Obligatorio_1.1/WebApplication1/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/flore/Source/Repos/ObligatorioP2-2/WebApplication1/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-bddmc6yalx
+[/Users/rodrigodelossantos/Desktop/RiderProjects/Obligatorio_1.1/WebApplication1/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-4ak7nacacg

@@ -1,58 +1,51 @@
-namespace Dominio;
-
-public abstract class Pago
+namespace Dominio
 {
-    public static int siguienteId = 1;
-    public int Id { get; set; }
-    public MetodoPago Metodo { get; set; }
-
-    public TipoGasto TipoGasto { get; set; }
-
-    public Usuario Usuario { get; set; }
-
-    public string Descripcion { get; set; }
-
-    public double Monto { get; set; }
-
-
-    public Pago(MetodoPago metodo, TipoGasto tipoGasto, Usuario usuario, string descripcion, double monto)
+    public abstract class Pago
     {
-        Id = siguienteId++;
-        Metodo = metodo;
-        TipoGasto = tipoGasto;
-        Usuario = usuario;
-        Descripcion = descripcion;
-        Monto = monto;
+        public static int siguienteId = 1;
+        public int Id { get; set; }
+        public MetodoPago Metodo { get; set; }
+        public TipoGasto TipoGasto { get; set; }
+        public Usuario Usuario { get; set; }
+        public string Descripcion { get; set; }
+        public double Monto { get; set; }
 
-        if (Usuario == null)
+        public Pago(MetodoPago metodo, TipoGasto tipoGasto, Usuario usuario, string descripcion, double monto)
         {
-            throw new Exception("El pago debe tener un usuario.");
+            Id = siguienteId++;
+            Metodo = metodo;
+            TipoGasto = tipoGasto;
+            Usuario = usuario;
+            Descripcion = descripcion;
+            Monto = monto;
+            // OJO: sin validaciones acá, las movemos a Validar()
         }
 
-        if (TipoGasto == null)
+    
+        //Validaciones comunes a todos los pagos.
+        public virtual void Validar()
         {
-            throw new Exception("El pago debe tener un tipo de gasto.");
+            if (Usuario == null)
+                throw new Exception("El pago debe tener un usuario.");
+
+            if (TipoGasto == null)
+                throw new Exception("El pago debe tener un tipo de gasto.");
+
+            if (string.IsNullOrWhiteSpace(Descripcion))
+                throw new Exception("La descripción del pago es obligatoria.");
+
+            if (Monto <= 0)
+                throw new Exception("El monto debe ser mayor a cero.");
         }
 
-        if (Monto <= 0)
+        public abstract double CalcularTotal();
+
+        public abstract bool EsDelMes(int mes, int anio);
+
+        // Por defecto usamos el total (pago único)
+        public virtual double MontoParaOrdenar()
         {
-            throw new Exception("El monto debe ser mayor a cero.");
+            return CalcularTotal();
         }
     }
-
-    //Estos metodos los vamos a sobreescribir en las clases hijas y los vamos a implementar en sistema
-  
-
-    public abstract double CalcularTotal();
-
-    public abstract bool EsDelMes(int mes, int anio);
-
-    // Por defecto usamos el total (pago �nico)
-    public virtual double MontoParaOrdenar()
-    {
-        return CalcularTotal();
-    }
-
-
-
 }

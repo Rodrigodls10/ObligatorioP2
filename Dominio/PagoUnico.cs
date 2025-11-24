@@ -1,26 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Dominio
+﻿namespace Dominio
 {
     public class PagoUnico : Pago
     {
         public DateTime fechaPago;
         public string nroRecibo;
 
-        public PagoUnico(MetodoPago metodo, TipoGasto tipoGasto, Usuario usuario, string descripcion, DateTime fechaPago, string nroRecibo, double monto ) 
-            : base(metodo, tipoGasto, usuario, descripcion, monto)
+        public PagoUnico(
+            MetodoPago metodo,
+            TipoGasto tipoGasto,
+            Usuario usuario,
+            string descripcion,
+            DateTime fechaPago,
+            string nroRecibo,
+            double monto
+        ) : base(metodo, tipoGasto, usuario, descripcion, monto)
         {
             this.fechaPago = fechaPago;
             this.nroRecibo = nroRecibo;
+        }
 
-            if (nroRecibo == null || nroRecibo == "")
-            {
+        public override void Validar()
+        {
+            // Validaciones Compartidas, luego vendrian las de la calse especifica
+            base.Validar();
+
+            if (fechaPago == DateTime.MinValue)
+                throw new Exception("Debe indicar la fecha de pago.");
+
+            if (string.IsNullOrWhiteSpace(nroRecibo))
                 throw new Exception("El número de recibo no puede estar vacío.");
-            }
         }
 
         public override double CalcularTotal()
@@ -36,18 +44,14 @@ namespace Dominio
             return total;
         }
 
-        // Metodo para ver si el pago corresponde al mes y año indicados 
         public override bool EsDelMes(int mes, int anio)
         {
             return fechaPago.Month == mes && fechaPago.Year == anio;
         }
 
-
-
-
         public override string ToString()
         {
-            return $"Pago Unico - Id: {Id}, Usuario - {Usuario.Email}, Tipo Gasto - {TipoGasto.Nombre}, Metodo {Metodo}, Descripcion {Descripcion}, Fecha {fechaPago.ToString("dd/MM/yyyy")}, Total - {CalcularTotal().ToString("0.00")} ";
+            return $"Pago Unico - Id: {Id}, Usuario - {Usuario.Email}, Tipo Gasto - {TipoGasto.Nombre}, Metodo {Metodo}, Descripcion {Descripcion}, Fecha {fechaPago:dd/MM/yyyy}, Total - {CalcularTotal():0.00} ";
         }
     }
 }
