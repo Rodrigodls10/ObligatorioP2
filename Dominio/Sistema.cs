@@ -469,35 +469,27 @@ public class Sistema
             if (p.Usuario == null || string.IsNullOrEmpty(p.Usuario.Email))
                 continue;
 
-            // filtro por usuario
             if (p.Usuario.Email.ToLower() == emailUsuario.ToLower())
-            {     
-                // Metodo polimorfico de Pagos 
+            {
+                // Método polimórfico EsDelMes
                 if (p.EsDelMes(mes, anio))
                 {
                     resultado.Add(p);
                 }
             }
         }
-        resultado.Sort(CompararPagosPorMonto);
+
+        // Aca usamos el CompareTo de Pago
+        resultado.Sort();
 
         return resultado;
-
     }
 
-    private int CompararPagosPorMonto(Pago a, Pago b)
-    {
-        double montoA = a.MontoParaOrdenar();
-        double montoB = b.MontoParaOrdenar();
-
-        
-        if (montoA > montoB) return -1;
-        if (montoA < montoB) return 1;
-        return 0;
-    }
     
 
-    //Armamos un metodo para buscar el usuario por el email para no tener en la variable de sesion el password, que el profe dijo en clase que no es recomendable en casos de vulnerabilidades en nuestro sistema 
+    /*Armamos un metodo para buscar el usuario por el email para no tener
+    en la variable de sesion el password, que el profe dijo en clase
+    que no es recomendable en casos de vulnerabilidades en nuestro sistema */
     public Usuario BuscarUsuarioPorEmail(string email)
     {
         if (email == null || email == "")
@@ -563,7 +555,7 @@ public class Sistema
             }
         }
     }
-    return null;
+        throw new Exception("No se encontro un tipo de gasto con ese nombre.");
     }
 
     public void CrearPago(Pago p)
@@ -641,34 +633,20 @@ public class Sistema
     }
 
 
-    public string EliminarTipoDeGasto(string nombreTipoGasto)
+    public void EliminarTipoDeGasto(string nombreTipoGasto)
     {
         if (nombreTipoGasto == null || nombreTipoGasto == "")
         {
-            return "El nombre del tipo de gasto no puede ser vacio";
+            throw new Exception("El nombre del tipo de gasto no puede ser vacio");
         }
 
         string buscarTipo = nombreTipoGasto.ToLower();
 
-        TipoGasto tipoGastoEliminado = null;
-
-        foreach (TipoGasto tg in this.TiposGasto)
-        {
-            if (tg != null && tg.Nombre != null)
-            {
-                if (tg.Nombre.ToLower() == buscarTipo)
-                {
-                    tipoGastoEliminado = tg;
-                }
-            }
-        }
-        if (tipoGastoEliminado == null)
-        {
-            return "No existe el tipo de gasto.";
-
-        }
+        TipoGasto tipoGastoEliminado = BuscarTipoGastoPorNombre(nombreTipoGasto);
+        
+        
+        
         //ver si el tipo de gasto se usa en algun pago
-        bool estaEnUso = false;
 
         foreach (Pago p in this.Pagos)
         {
@@ -676,18 +654,30 @@ public class Sistema
             {
                 if (p.TipoGasto.Nombre.ToLower() == buscarTipo)
                 {
-                    estaEnUso = true;
+                    throw new Exception("El tipo de gasto se encuentra en un pago");
                 }
             }
         }
+        this.TiposGasto.Remove(tipoGastoEliminado); 
 
-        if (estaEnUso)
+        
+    }
+
+    private void ValidarExistenciaTg(string nombreTipoGasto)
+    {
+        foreach (TipoGasto tg in this.TiposGasto)
         {
-            return "No se pude eliminar el tipo de gasto porque está siendo utilizado en un pago";
+            if (tg.Nombre.ToLower() != null)
+            {
+                if (tg.Nombre.ToLower() == nombreTipoGasto)
+                {
+                    return;
+                }
+            }
         }
+        
+        throw new Exception("No existe el tipo de gasto.") ;
 
-        this.TiposGasto.Remove(tipoGastoEliminado);
-
-        return null;
+        
     }
 }

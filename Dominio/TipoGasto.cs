@@ -14,6 +14,12 @@ public class TipoGasto
         Nombre = nombre;
         Descripcion = descripcion;
     }
+
+    public override bool Equals(object obj)
+    {
+        TipoGasto tipoGasto = (TipoGasto) obj;
+        return this.Nombre == tipoGasto.Nombre;
+    }
     
     
 }

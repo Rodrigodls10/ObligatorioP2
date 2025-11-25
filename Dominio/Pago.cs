@@ -1,6 +1,6 @@
 namespace Dominio
 {
-    public abstract class Pago
+    public abstract class Pago : IValidable , IComparable<Pago>
     {
         public static int siguienteId = 1;
         public int Id { get; set; }
@@ -18,11 +18,11 @@ namespace Dominio
             Usuario = usuario;
             Descripcion = descripcion;
             Monto = monto;
-            // OJO: sin validaciones acá, las movemos a Validar()
+            
         }
 
     
-        //Validaciones comunes a todos los pagos.
+        //Validaciones comunes a todos los pagos
         public virtual void Validar()
         {
             if (Usuario == null)
@@ -47,5 +47,12 @@ namespace Dominio
         {
             return CalcularTotal();
         }
+        
+        public int CompareTo(Pago? other)
+        {
+            return other.CalcularTotal().CompareTo(this.CalcularTotal());
+            
+        }
+
     }
 }

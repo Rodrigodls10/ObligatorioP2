@@ -44,16 +44,17 @@ public class TipoGastoController : Controller
     [HttpPost]
     public IActionResult EliminarTipoGasto(string nombreTipoGasto)
     {
-        string mensaje = sistema.EliminarTipoDeGasto(nombreTipoGasto);
-
-        if(mensaje != null)
+        try
         {
-            TempData["Error"] = mensaje;
+            sistema.EliminarTipoDeGasto(nombreTipoGasto);
+            TempData["Mensaje"] = "El tipo de gasto fue eliminado correctamente"; 
 
         }
-        else { 
-            TempData["Mensaje"] = "El tipo de gasto fue eliminado correctamente"; 
-        }
+        catch (Exception e)
+        {
+            TempData["Error"] = e.Message;
+        } 
+        
         return RedirectToAction("CrearTipoGasto");
     }
 }
