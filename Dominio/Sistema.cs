@@ -590,7 +590,7 @@ public class Sistema
                 // Polimorfismo: EsDelMes se implementa distinto en PagoUnico y PagoRecurrente
                 if (p.EsDelMes(mes, anio))
                 {
-                    total += p.Monto; // usamos el monto base como pide el enunciado
+                    total += p.Monto; // usamos el monto base como pide lal letra del obl
                 }
             }
         }
@@ -617,20 +617,15 @@ public class Sistema
             }
         }
 
-        // Ordenamos 
-        resultado.Sort(CompararUsuariosPorEmail);
+        // Ordenamos usando la interfaz de compareto
+        resultado.Sort();
 
         return resultado;
     }
 
-   
-    private int CompararUsuariosPorEmail(Usuario a, Usuario b)
-    {
-        string emailA = a.Email == null ? "" : a.Email;
-        string emailB = b.Email == null ? "" : b.Email;
 
-        return String.Compare(emailA, emailB, true); 
-    }
+
+
 
 
     public void EliminarTipoDeGasto(string nombreTipoGasto)

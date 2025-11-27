@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace Dominio
 {  
-    public abstract class Usuario
+    public abstract class Usuario : IValidable , IComparable<Usuario>
     {
         public string Nombre { get; set; }
         public string Apellido { get; set; }
@@ -46,6 +46,12 @@ namespace Dominio
         }
 
         public abstract string Rol();
+
+        public int CompareTo(Usuario other)
+        {
+            return this.Email.ToLower().CompareTo(other.Email.ToLower());
+        }
+
     }
 }
 
