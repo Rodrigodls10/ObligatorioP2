@@ -164,6 +164,63 @@ namespace WebApplication1.Controllers
 
 
         }
+
+        public IActionResult PagosEquipo()
+        {
+            string email = HttpContext.Session.GetString("email");
+            if (string.IsNullOrEmpty(email))
+            {
+                return RedirectToAction("Autenticar", "Login");
+            }
+
+            DateTime hoy = DateTime.Today;
+            int mes = hoy.Month;
+            int anio = hoy.Year;
+
+            List<Pago> pagos = new List<Pago>();
+
+            try
+            {
+                pagos = sistema.FiltrarPagosEquipo(email, mes, anio);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+            }
+
+            ViewBag.Mes = mes;
+            ViewBag.Anio = anio;
+
+            return View(pagos);
+        }
+
+        [HttpPost]
+        public IActionResult PagosEquipo(int mes, int anio)
+        {
+            string email = HttpContext.Session.GetString("email");
+            if (string.IsNullOrEmpty(email))
+            {
+                return RedirectToAction("Autenticar", "Login");
+            }
+
+            List<Pago> pagos = new List<Pago>();
+
+            try
+            {
+                pagos = sistema.FiltrarPagosEquipo(email, mes, anio);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+            }
+
+            ViewBag.Mes = mes;
+            ViewBag.Anio = anio;
+
+            return View(pagos);
+        }
     }
 }
+    
+
 

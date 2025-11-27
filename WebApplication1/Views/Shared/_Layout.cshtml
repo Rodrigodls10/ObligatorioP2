@@ -75,6 +75,15 @@
 
                         }
 
+                        @if (rol == "Gerente")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Pago" asp-action="PagosEquipo">
+                                    Pagos del equipo
+                                </a>
+                            </li>
+                        }
+
 
 
                     </ul>

@@ -55,9 +55,9 @@ namespace Dominio
 
         public int CompareTo(Pago? other)
         {
-            return other.CalcularTotal().CompareTo(this.CalcularTotal());
-            
+            return other.MontoParaOrdenar().CompareTo(this.MontoParaOrdenar());
         }
+
 
     }
 }

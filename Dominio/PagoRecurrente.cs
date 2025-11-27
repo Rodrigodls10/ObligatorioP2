@@ -96,8 +96,32 @@
 
         public override bool EsDelMes(int mes, int anio)
         {
-            return fechaDesde.Month == mes && fechaDesde.Year == anio;
+            // Primer y último día del mes consultado
+            DateTime primerDiaMes = new DateTime(anio, mes, 1);
+            DateTime ultimoDiaMes = primerDiaMes.AddMonths(1).AddDays(-1);
+
+            // Rango del pago recurrente
+            DateTime inicio = fechaDesde;
+            DateTime fin;
+
+            if (tieneLimite)
+            {
+                fin = fechaHasta;
+            }
+            else
+            {
+                // Si no tiene límite, sigue activo hacia el futuro
+                fin = DateTime.MaxValue;
+            }
+
+           
+            bool empiezaAntesDeTerminarMes = inicio <= ultimoDiaMes;
+            bool terminaDespuesDeEmpezarMes = fin >= primerDiaMes;
+
+            
+            return empiezaAntesDeTerminarMes && terminaDespuesDeEmpezarMes;
         }
+
 
         public override double MontoParaOrdenar()
         {
