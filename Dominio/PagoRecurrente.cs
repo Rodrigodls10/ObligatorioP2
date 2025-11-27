@@ -104,6 +104,17 @@
             return Monto; // cuota mensual
         }
 
+        public override string ObtenerTipo()
+        {
+            return "Recurrente";
+        }
+
+        public override DateTime ObtenerFecha()
+        {
+            return fechaDesde;
+        }
+
+
         public override string ToString()
         {
             return $"Pago Recurrente - Id: {Id}, Usuario - {Usuario.Email}, Tipo Gasto - {TipoGasto.Nombre}, Metodo {Metodo}, Descripcion {Descripcion}, Desde {fechaDesde:dd/MM/yyyy}, Total - {CalcularTotal():0.00}";

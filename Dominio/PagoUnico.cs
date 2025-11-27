@@ -21,7 +21,7 @@
 
         public override void Validar()
         {
-            // Validaciones Compartidas, luego vendrian las de la calse especifica
+            // Validaciones Compartidas, luego pondremos la de la calse que corresponda flor
             base.Validar();
 
             if (fechaPago == DateTime.MinValue)
@@ -48,6 +48,17 @@
         {
             return fechaPago.Month == mes && fechaPago.Year == anio;
         }
+
+        public override string ObtenerTipo()
+        {
+            return "Único";
+        }
+
+        public override DateTime ObtenerFecha()
+        {
+            return fechaPago;
+        }
+
 
         public override string ToString()
         {

@@ -47,7 +47,12 @@ namespace Dominio
         {
             return CalcularTotal();
         }
-        
+
+        public abstract string ObtenerTipo();
+
+        public abstract DateTime ObtenerFecha();
+
+
         public int CompareTo(Pago? other)
         {
             return other.CalcularTotal().CompareTo(this.CalcularTotal());

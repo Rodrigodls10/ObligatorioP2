@@ -680,4 +680,66 @@ public class Sistema
 
         
     }
+
+    //metodo gerente punto 1
+    private void ValidarFecha(int mes, int anio)
+    {
+        if (mes < 1 || mes > 12)
+            throw new Exception("El mes debe estar entre enero y diciembre");
+    }
+    private List<Pago> FiltrarPagosEquipo(Equipo equipo)
+    {
+        List<Pago> listaPagos = new List<Pago>();
+
+        foreach (Pago p in this.Pagos)
+        {
+            if (p != null && p.Usuario != null && equipo.Usuarios.Contains(p.Usuario))
+                listaPagos.Add(p);
+        }
+        return listaPagos;
+    }
+
+    private List<Pago> FiltrarPagosPorMes(List<Pago> pagos, int mes, int anio)
+    {
+        List<Pago> lista = new List<Pago>();
+
+        foreach (Pago p in pagos)
+        {
+            if (p.EsDelMes(mes, anio))
+                lista.Add(p);
+        }
+        return lista;
+    }
+
+    public List<Pago> OrdenarPagos(List<Pago> lista)
+    {
+        lista.Sort();
+        return lista;
+    }
+    //metodo que retona la lista de pagos de generente ordenada 
+    private List<Pago> FiltrarPagosEquipo(Usuario gerente, int mes, int anio)
+    {
+        ValidarFecha(mes, anio);
+
+        Equipo eq = BuscarEquipoDeUsuario(gerente);
+        if (eq == null)
+            throw new Exception("El gerente no tiene equipo");
+
+        List<Pago> pagosEquipo = FiltrarPagosEquipo(eq);
+        List<Pago> pagosMes = FiltrarPagosPorMes(pagosEquipo, mes, anio);
+        return OrdenarPagos(pagosMes);
+    }
+
+    //este es el metodo publico que va ser llamado por el controlador para tener la lista de pagos
+    public List<Pago> FiltrarPagosEquipo(string emailGerente, int mes, int anio)
+    {
+        //Validamos por las dudas que el email no llegue vacio 
+        if (string.IsNullOrWhiteSpace(emailGerente))
+        {
+            throw new Exception("El email del gerente no puede ser vacío.");
+        }
+        Usuario u = BuscarUsuarioPorEmail(emailGerente);
+
+        return FiltrarPagosEquipo(u, mes, anio);
+    }
 }
