@@ -11,7 +11,7 @@ public class TipoGastoController : Controller
     {
         string? rol = HttpContext.Session.GetString("rol");
         if (rol != "Gerente")
-            return RedirectToAction("Error", "NoPermitido");
+            return RedirectToAction("NoPermitido", "Error");
         ViewBag.Tipos = sistema.TiposGasto;
         return View();
     }
@@ -23,7 +23,7 @@ public class TipoGastoController : Controller
         try
         {
             if (HttpContext.Session.GetString("rol") != "Gerente")
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("NoPermitido", "Error");
             TipoGasto tg = new TipoGasto(nombre, descripcion);
 
 

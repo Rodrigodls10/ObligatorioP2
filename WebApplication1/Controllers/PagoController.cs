@@ -11,25 +11,29 @@ namespace WebApplication1.Controllers
 
         public IActionResult MisPagos()
         {
-
-            string? email = HttpContext.Session.GetString("email");
-            if (email == null || email == "")
+            try
             {
+                string? email = HttpContext.Session.GetString("email");
+                if (string.IsNullOrEmpty(email))
+                {
+                    return RedirectToAction("Autenticar", "Login");
+                }
 
-                return RedirectToAction("Autenticar", "Login");
+                DateTime hoy = DateTime.Today;
+                int mes = hoy.Month;
+                int anio = hoy.Year;
+
+                List<Pago> pagos = sistema.ListarPagosUsuarioMes(email, mes, anio);
+
+                return View(pagos);
             }
-
-
-            DateTime hoy = DateTime.Today;
-            int mes = hoy.Month;
-            int anio = hoy.Year;
-
-
-            List<Pago> pagos = sistema.ListarPagosUsuarioMes(email, mes, anio);
-
-
-            return View(pagos);
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+                return View(new List<Pago>()); 
+            }
         }
+
 
         public IActionResult Cargar()
         {
@@ -59,20 +63,21 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public IActionResult CrearUnico(string nombreTipoGasto, MetodoPago metodoPago, string descripcion, DateTime? fechaPago, string nroRecibo, double monto)
         {
-            string email = HttpContext.Session.GetString("email");
-            if (string.IsNullOrEmpty(email))
-            {
-                return RedirectToAction("Autenticar", "Login");
-            }
-
-            Usuario usuarioActual = sistema.BuscarUsuarioPorEmail(email);
-
-            // Recargamos combos si hay error
-            ViewBag.TiposGasto = sistema.TiposGasto;
-            ViewBag.MetodosPago = Enum.GetValues(typeof(MetodoPago));
+         
 
             try
             {
+                string email = HttpContext.Session.GetString("email");
+                if (string.IsNullOrEmpty(email))
+                {
+                    return RedirectToAction("Autenticar", "Login");
+                }
+
+                Usuario usuarioActual = sistema.BuscarUsuarioPorEmail(email);
+
+                // Recargamos combos si hay error
+                ViewBag.TiposGasto = sistema.TiposGasto;
+                ViewBag.MetodosPago = Enum.GetValues(typeof(MetodoPago));
 
                 if (!fechaPago.HasValue)
                     throw new Exception("Debe ingresar una fecha de pago.");
@@ -104,34 +109,46 @@ namespace WebApplication1.Controllers
 
         public IActionResult CrearRecurrente()
         {
-            string email = HttpContext.Session.GetString("email");
-            if (string.IsNullOrEmpty(email))
+            try
             {
-                return RedirectToAction("Autenticar", "Login");
+                string email = HttpContext.Session.GetString("email");
+                if (string.IsNullOrEmpty(email))
+                {
+                    return RedirectToAction("Autenticar", "Login");
+                }
+
+                ViewBag.TiposGasto = sistema.TiposGasto;
+                ViewBag.MetodosPago = Enum.GetValues(typeof(MetodoPago));
+
+                return View();
             }
-
-            ViewBag.TiposGasto = sistema.TiposGasto;
-            ViewBag.MetodosPago = Enum.GetValues(typeof(MetodoPago));
-
-            return View();
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+                return View(); 
+            }
         }
+
 
         [HttpPost]
         public IActionResult CrearRecurrente(string nombreTipoGasto, MetodoPago metodoPago, string descripcion, DateTime? fechaDesde, DateTime? fechaHasta, bool tieneLimite, double monto)
         {
-            string email = HttpContext.Session.GetString("email");
-            if (string.IsNullOrEmpty(email))
-            {
-                return RedirectToAction("Autenticar", "Login");
-            }
-
-            Usuario usuarioActual = sistema.BuscarUsuarioPorEmail(email);
-
-            ViewBag.TiposGasto = sistema.TiposGasto;
-            ViewBag.MetodosPago = Enum.GetValues(typeof(MetodoPago));
+           
 
             try
             {
+                string email = HttpContext.Session.GetString("email");
+                if (string.IsNullOrEmpty(email))
+                {
+                    return RedirectToAction("Autenticar", "Login");
+                }
+
+                Usuario usuarioActual = sistema.BuscarUsuarioPorEmail(email);
+
+                ViewBag.TiposGasto = sistema.TiposGasto;
+                ViewBag.MetodosPago = Enum.GetValues(typeof(MetodoPago));
+
+
                 if (!fechaDesde.HasValue)
                     throw new Exception("Debe ingresar la fecha de inicio.");
 
@@ -167,11 +184,7 @@ namespace WebApplication1.Controllers
 
         public IActionResult PagosEquipo()
         {
-            string email = HttpContext.Session.GetString("email");
-            if (string.IsNullOrEmpty(email))
-            {
-                return RedirectToAction("Autenticar", "Login");
-            }
+          
 
             DateTime hoy = DateTime.Today;
             int mes = hoy.Month;
@@ -181,6 +194,18 @@ namespace WebApplication1.Controllers
 
             try
             {
+                string email = HttpContext.Session.GetString("email");
+                if (string.IsNullOrEmpty(email))
+                {
+                    return RedirectToAction("Autenticar", "Login");
+                }
+
+                string rol = HttpContext.Session.GetString("rol");
+                if (rol != "Gerente")
+                {
+                    return RedirectToAction("NoPermitido", "Error");
+                }
+
                 pagos = sistema.FiltrarPagosEquipo(email, mes, anio);
             }
             catch (Exception ex)
@@ -197,16 +222,24 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public IActionResult PagosEquipo(int mes, int anio)
         {
-            string email = HttpContext.Session.GetString("email");
-            if (string.IsNullOrEmpty(email))
-            {
-                return RedirectToAction("Autenticar", "Login");
-            }
+           
 
             List<Pago> pagos = new List<Pago>();
 
             try
             {
+                string email = HttpContext.Session.GetString("email");
+                if (string.IsNullOrEmpty(email))
+                {
+                    return RedirectToAction("Autenticar", "Login");
+                }
+
+                string rol = HttpContext.Session.GetString("rol");
+                if (rol != "Gerente")
+                {
+                    return RedirectToAction("NoPermitido", "Error");
+                }
+
                 pagos = sistema.FiltrarPagosEquipo(email, mes, anio);
             }
             catch (Exception ex)
