@@ -1,22 +1,82 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\flore\\source\\repos\\ObligatorioP2-2\\",
+  "WorkspaceRootPath": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5268573D-ECD0-4C4B-B2D2-ACC905A9D1BB}|Dominio\\Dominio.csproj|c:\\users\\flore\\source\\repos\\obligatoriop2-2\\dominio\\sistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|c:\\users\\rodri\\desktop\\obligatoriop2\\webapplication1\\views\\tipogasto\\creartipogasto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\tipogasto\\creartipogasto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5268573D-ECD0-4C4B-B2D2-ACC905A9D1BB}|Dominio\\Dominio.csproj|c:\\users\\rodri\\desktop\\obligatoriop2\\dominio\\sistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5268573D-ECD0-4C4B-B2D2-ACC905A9D1BB}|Dominio\\Dominio.csproj|solutionrelative:dominio\\sistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|c:\\users\\flore\\source\\repos\\obligatoriop2-2\\webapplication1\\controllers\\tipogastocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|c:\\users\\rodri\\desktop\\obligatoriop2\\webapplication1\\controllers\\tipogastocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\tipogastocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|c:\\users\\flore\\source\\repos\\obligatoriop2-2\\webapplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|c:\\users\\rodri\\desktop\\obligatoriop2\\webapplication1\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|c:\\users\\flore\\source\\repos\\obligatoriop2-2\\webapplication1\\views\\tipogasto\\creartipogasto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\tipogasto\\creartipogasto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5268573D-ECD0-4C4B-B2D2-ACC905A9D1BB}|Dominio\\Dominio.csproj|c:\\users\\rodri\\desktop\\obligatoriop2\\dominio\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5268573D-ECD0-4C4B-B2D2-ACC905A9D1BB}|Dominio\\Dominio.csproj|solutionrelative:dominio\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|c:\\users\\rodri\\desktop\\obligatoriop2\\webapplication1\\views\\pago\\mispagos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\pago\\mispagos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|c:\\users\\rodri\\desktop\\obligatoriop2\\webapplication1\\controllers\\pagocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\pagocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|c:\\users\\rodri\\desktop\\obligatoriop2\\webapplication1\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|c:\\users\\rodri\\desktop\\obligatoriop2\\webapplication1\\controllers\\errorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\errorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|c:\\users\\rodri\\desktop\\obligatoriop2\\webapplication1\\views\\usuario\\verperfil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\usuario\\verperfil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|c:\\users\\rodri\\desktop\\obligatoriop2\\webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|c:\\users\\rodri\\desktop\\obligatoriop2\\webapplication1\\views\\pago\\cargar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\pago\\cargar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|c:\\users\\rodri\\desktop\\obligatoriop2\\webapplication1\\views\\pago\\crearrecurrente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\pago\\crearrecurrente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|c:\\users\\rodri\\desktop\\obligatoriop2\\webapplication1\\views\\pago\\crearunico.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\pago\\crearunico.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|c:\\users\\rodri\\desktop\\obligatoriop2\\webapplication1\\views\\pago\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\pago\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5268573D-ECD0-4C4B-B2D2-ACC905A9D1BB}|Dominio\\Dominio.csproj|c:\\users\\rodri\\desktop\\obligatoriop2\\dominio\\pago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5268573D-ECD0-4C4B-B2D2-ACC905A9D1BB}|Dominio\\Dominio.csproj|solutionrelative:dominio\\pago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5268573D-ECD0-4C4B-B2D2-ACC905A9D1BB}|Dominio\\Dominio.csproj|c:\\users\\rodri\\desktop\\obligatoriop2\\dominio\\pagounico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5268573D-ECD0-4C4B-B2D2-ACC905A9D1BB}|Dominio\\Dominio.csproj|solutionrelative:dominio\\pagounico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5268573D-ECD0-4C4B-B2D2-ACC905A9D1BB}|Dominio\\Dominio.csproj|c:\\users\\rodri\\desktop\\obligatoriop2\\dominio\\pagorecurrente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5268573D-ECD0-4C4B-B2D2-ACC905A9D1BB}|Dominio\\Dominio.csproj|solutionrelative:dominio\\pagorecurrente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|c:\\users\\rodri\\desktop\\obligatoriop2\\webapplication1\\webapplication1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{BEDB1BD5-2630-4698-BD6D-6EAA18FD9751}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\webapplication1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,66 +86,253 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d84ee353-0bef-5a41-a649-8f89aca5d84d}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CrearTipoGasto.cshtml",
-              "DocumentMoniker": "C:\\Users\\flore\\source\\repos\\ObligatorioP2-2\\WebApplication1\\Views\\TipoGasto\\CrearTipoGasto.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\TipoGasto\\CrearTipoGasto.cshtml",
-              "ToolTip": "C:\\Users\\flore\\source\\repos\\ObligatorioP2-2\\WebApplication1\\Views\\TipoGasto\\CrearTipoGasto.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\TipoGasto\\CrearTipoGasto.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-22T02:04:06.654Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TipoGastoController.cs",
-              "DocumentMoniker": "C:\\Users\\flore\\source\\repos\\ObligatorioP2-2\\WebApplication1\\Controllers\\TipoGastoController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\TipoGastoController.cs",
-              "ToolTip": "C:\\Users\\flore\\source\\repos\\ObligatorioP2-2\\WebApplication1\\Controllers\\TipoGastoController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\TipoGastoController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAowCgAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\Dominio\\Usuario.cs",
+              "RelativeDocumentMoniker": "Dominio\\Usuario.cs",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\Dominio\\Usuario.cs",
+              "RelativeToolTip": "Dominio\\Usuario.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T01:58:02.824Z",
+              "WhenOpened": "2025-11-25T14:58:08.495Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Sistema.cs",
-              "DocumentMoniker": "C:\\Users\\flore\\source\\repos\\ObligatorioP2-2\\Dominio\\Sistema.cs",
-              "RelativeDocumentMoniker": "Dominio\\Sistema.cs",
-              "ToolTip": "C:\\Users\\flore\\source\\repos\\ObligatorioP2-2\\Dominio\\Sistema.cs",
-              "RelativeToolTip": "Dominio\\Sistema.cs",
-              "ViewState": "AgIAAKcAAAAAAAAAAAAYwLUAAAAAAAAAAAAAAA==",
+              "Title": "CrearTipoGasto.cshtml",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\Views\\TipoGasto\\CrearTipoGasto.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\TipoGasto\\CrearTipoGasto.cshtml",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\Views\\TipoGasto\\CrearTipoGasto.cshtml*",
+              "RelativeToolTip": "WebApplication1\\Views\\TipoGasto\\CrearTipoGasto.cshtml*",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-23T01:03:44.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAmwEkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-21T21:04:36.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\Views\\Pago\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Pago\\Index.cshtml",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\Views\\Pago\\Index.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Pago\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-21T21:55:36.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T00:53:41.921Z",
+              "WhenOpened": "2025-11-21T21:03:43.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Sistema.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\Dominio\\Sistema.cs",
+              "RelativeDocumentMoniker": "Dominio\\Sistema.cs",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\Dominio\\Sistema.cs",
+              "RelativeToolTip": "Dominio\\Sistema.cs",
+              "ViewState": "AgIAAIUBAAAAAAAAAIAwwI0BAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T20:56:26.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBMAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T22:25:16.134Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\flore\\source\\repos\\ObligatorioP2-2\\WebApplication1\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\flore\\source\\repos\\ObligatorioP2-2\\WebApplication1\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Title": "TipoGastoController.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\Controllers\\TipoGastoController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\TipoGastoController.cs",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\Controllers\\TipoGastoController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\TipoGastoController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwB0AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T23:35:27.197Z",
+              "WhenOpened": "2025-11-21T21:17:04.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PagoController.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\Controllers\\PagoController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\PagoController.cs",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\Controllers\\PagoController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\PagoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T21:04:15.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "VerPerfil.cshtml",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\Views\\Usuario\\VerPerfil.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Usuario\\VerPerfil.cshtml",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\Views\\Usuario\\VerPerfil.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Usuario\\VerPerfil.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-21T22:29:55.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MisPagos.cshtml",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\Views\\Pago\\MisPagos.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Pago\\MisPagos.cshtml",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\Views\\Pago\\MisPagos.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Pago\\MisPagos.cshtml",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAmwBEAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-21T21:04:00.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ErrorController.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\Controllers\\ErrorController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\ErrorController.cs",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\Controllers\\ErrorController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\ErrorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T22:41:47.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PagoUnico.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\Dominio\\PagoUnico.cs",
+              "RelativeDocumentMoniker": "Dominio\\PagoUnico.cs",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\Dominio\\PagoUnico.cs",
+              "RelativeToolTip": "Dominio\\PagoUnico.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T20:57:25.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Cargar.cshtml",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\Views\\Pago\\Cargar.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Pago\\Cargar.cshtml",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\Views\\Pago\\Cargar.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Pago\\Cargar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-21T21:57:22.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CrearRecurrente.cshtml",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\Views\\Pago\\CrearRecurrente.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Pago\\CrearRecurrente.cshtml",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\Views\\Pago\\CrearRecurrente.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Pago\\CrearRecurrente.cshtml",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAmwFoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-21T21:59:29.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CrearUnico.cshtml",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\Views\\Pago\\CrearUnico.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Pago\\CrearUnico.cshtml",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\Views\\Pago\\CrearUnico.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Pago\\CrearUnico.cshtml",
+              "ViewState": "AgIAADEAAAAAAAAAAAAmwFIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-21T21:58:21.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PagoRecurrente.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\Dominio\\PagoRecurrente.cs",
+              "RelativeDocumentMoniker": "Dominio\\PagoRecurrente.cs",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\Dominio\\PagoRecurrente.cs",
+              "RelativeToolTip": "Dominio\\PagoRecurrente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T20:57:04.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Pago.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\Dominio\\Pago.cs",
+              "RelativeDocumentMoniker": "Dominio\\Pago.cs",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\Dominio\\Pago.cs",
+              "RelativeToolTip": "Dominio\\Pago.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T20:55:44.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "WebApplication1",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\WebApplication1.csproj",
+              "RelativeDocumentMoniker": "WebApplication1\\WebApplication1.csproj",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\ObligatorioP2\\WebApplication1\\WebApplication1.csproj",
+              "RelativeToolTip": "WebApplication1\\WebApplication1.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-21T20:50:32.181Z",
               "EditorCaption": ""
             }
           ]
